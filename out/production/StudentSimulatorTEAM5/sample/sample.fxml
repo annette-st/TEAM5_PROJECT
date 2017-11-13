@@ -1,19 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-
-<GridPane alignment="center" hgap="10" vgap="10" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.141" fx:controller="sample.Controller">
-   <columnConstraints>
-      <ColumnConstraints />
-   </columnConstraints>
-   <rowConstraints>
-      <RowConstraints />
-   </rowConstraints>
+<Pane maxHeight="300" maxWidth="275" minHeight="300" minWidth="275" prefHeight="300.0" prefWidth="275.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
-      <AnchorPane prefHeight="539.0" prefWidth="732.0" />
+      <VBox prefHeight="300.0" prefWidth="275.0">
+         <children>
+            <Label prefHeight="42.0" prefWidth="165.0" text="Student Simulator" textAlignment="CENTER">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Button fx:id="startButton" mnemonicParsing="false" onAction="#start" prefHeight="20.0" prefWidth="75.0" text="Start" />
+            <Button fx:id="creditsButton" mnemonicParsing="false" onAction="#showCredits" prefHeight="20.0" prefWidth="75.0" text="Credits" />
+            <Button fx:id="exitButton" mnemonicParsing="false" onAction="#exit" prefHeight="20.0" prefWidth="75.0" text="Exit" />
+            <Button fx:id="rulesButton" mnemonicParsing="false" onAction="#showRules" prefHeight="20.0" prefWidth="75.0" text="Rules" />
+         </children>
+      </VBox>
    </children>
-</GridPane>
+</Pane>
