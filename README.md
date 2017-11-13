@@ -6,7 +6,7 @@
 
 Max Pozdeev
 
-### PROGAMMERS
+### DEVELOPERS
 
 Razil Minneakhmetov
 

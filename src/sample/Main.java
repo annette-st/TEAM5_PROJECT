@@ -10,17 +10,22 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
-        primaryStage.setTitle("Hello World");
-        primaryStage.setScene(new Scene(root, 300, 275));
+        Parent root = FXMLLoader.load(getClass().getResource("fxmlFiles/mainWindow.fxml"));
+        primaryStage.setTitle("The Game");
+        primaryStage.setScene(new Scene(root, 450, 475));
+        primaryStage.setMinHeight(475);
+        primaryStage.setMinWidth(450);
+        primaryStage.setMaxHeight(475);
+        primaryStage.setMaxWidth(450);
         primaryStage.show();
 
     }
 
 
     public static void main(String[] args) {
-        Student student = new Student(100,100, 100, 100);
+        launch(args);
+
+        Student student = new Student(100, 100, 100, 100);
         student.toHack();
-        //launch(args);
     }
 }
