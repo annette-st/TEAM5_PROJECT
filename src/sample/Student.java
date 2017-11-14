@@ -19,7 +19,7 @@ public class Student {
 
     public void toHack() {
 
-        final int attempts = 3; //кол-во попыток
+        final int ATTEMPTS = 4; //кол-во попыток
         boolean end = false; // конец игры (true - игра кончилась с положительным исходом, false - с отрицательным)
         //что будет выводиться
         char output[] = new char[4];
@@ -47,15 +47,15 @@ public class Student {
         }
         //игра
 
+<<<<<<< HEAD
         for (int n = 0; n < attempts; n++) {
 
-            for (int x : cardID) {
-                System.out.print(x);
-            }
-            System.out.println();
+=======
+        for (int n = 0; n < ATTEMPTS; n++) {
+>>>>>>> 18bbfb8d6d56107a195896e8afca0180533c7797
             //ввод 4-значного числа
             System.out.println("Введите щисло");
-            int input = scanner.nextInt(); ////////////////////////////////////////////// вводимое число
+            int input = scanner.nextInt();                      // вводимое число
             int inputID[] = new int[4];
 
             // формирование числа в массив цифр
@@ -115,7 +115,7 @@ public class Student {
         }
 
         if (end == true) // действие при конце игры с положительным исходом
-            System.out.println("игру выиграл");
+            System.out.println("Поздравляем! Ты выиграл :З");
         else { //с отрицательным
             System.out.println("игру не выиграл");
         }

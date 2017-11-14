@@ -10,7 +10,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("fxmlFiles/mainWindow.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("fxmlFiles/atmMachine.fxml"));
         primaryStage.setTitle("The Game");
         primaryStage.setScene(new Scene(root, 450, 475));
         primaryStage.setMinHeight(475);
