@@ -48,8 +48,12 @@ public class Student {
         //игра
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         for (int n = 0; n < attempts; n++) {
 
+=======
+        for (int n = 0; n < ATTEMPTS; n++) {
+>>>>>>> 18bbfb8d6d56107a195896e8afca0180533c7797
 =======
         for (int n = 0; n < ATTEMPTS; n++) {
 >>>>>>> 18bbfb8d6d56107a195896e8afca0180533c7797
