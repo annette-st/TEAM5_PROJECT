@@ -3,7 +3,9 @@ package sample.classes;
 import java.util.Random;
 import java.util.Scanner;
 
+
 public class Student {
+    Random rnd = new Random(System.currentTimeMillis());
     Scanner scanner = new Scanner(System.in);
     int satiety;
     int energy;
@@ -15,6 +17,61 @@ public class Student {
         this.energy = energy;
         this.university = university;
         this.money = money;
+    }
+
+    public void tiredness() throws InterruptedException {
+        //этот метод означает, что через определенное кол-во времени человек будет уставать и голодать
+        //метод выполняется в background режиме
+        while (true) {
+            Thread.sleep(3000);
+            satiety -= 5;
+            energy -= 4;
+        }
+    }
+
+    public void toSleep() {
+        int energyPoints = 60 + rnd.nextInt(70-60+1); //кол-во энергии за один сон
+        if (energyPoints + energy > 100) energy = 100;
+            else energy +=energyPoints;
+    }
+
+    public void toStudy() {
+        int universityPoints = 20 + rnd.nextInt(35-20+1);
+        if (universityPoints + university > 100) university = 100;
+            else university +=universityPoints;
+    }
+
+    public void toEat() {
+        int restaurant = 0;
+        int eatingPoints = 0; //кол-во сытости за один поход в кафешку
+        switch (restaurant) {
+            case 1: //добрая
+                eatingPoints = 15 + rnd.nextInt(30-15+1);
+                money -= 100 + rnd.nextInt(200-100+1);
+                if (eatingPoints + satiety > 100) satiety = 100;
+                    else satiety += eatingPoints;
+            case 2: //ханума
+                eatingPoints = 20 + rnd.nextInt(40-20+1);
+                money -= 100 + rnd.nextInt(250-100+1);
+                if (eatingPoints + satiety > 100) satiety = 100;
+                    else satiety += eatingPoints;
+            case 3: //дошик
+                eatingPoints = 5 + rnd.nextInt(15-5+1);
+                money -= 20 + rnd.nextInt(50-20+1);
+                if (eatingPoints + satiety > 100) satiety = 100;
+                else satiety += eatingPoints;
+            case 4: //макдональдс
+                eatingPoints = 35 + rnd.nextInt(50-35+1);
+                money -= 350 + rnd.nextInt(600-350+1);
+                if (eatingPoints + satiety > 100) satiety = 100;
+                else satiety += eatingPoints;
+            case 5: //мастер пицца
+                eatingPoints = 20 + rnd.nextInt(30-20+1);
+                money -= 100 + rnd.nextInt(140-100+1);
+                if (eatingPoints + satiety > 100) satiety = 100;
+                else satiety += eatingPoints;
+        }
+
     }
 
     public void toHack() {
@@ -34,7 +91,6 @@ public class Student {
 
         int cardID[] = new int[4];
         //генерация рандомного числа
-        Random rnd = new Random(System.currentTimeMillis());
         boolean digits[] = new boolean[10];
         for (int i = 0; i < digits.length; i++)
             digits[i] = true;
@@ -45,10 +101,10 @@ public class Student {
             while (digits[cardID[i]] != true);
             digits[cardID[i]] = false;
         }
+        //попытка на который сейчас игрок
+        int thisAttempt;
         //игра
-
-
-        for (int n = 0; n < ATTEMPTS; n++) {
+        for (thisAttempt = 0; thisAttempt < ATTEMPTS; thisAttempt++) {
 
             //ввод 4-значного числа
             System.out.println("Введите щисло");
@@ -111,8 +167,10 @@ public class Student {
             System.out.println(" ");
         }
 
-        if (end == true) // действие при конце игры с положительным исходом
-            System.out.println("Поздравляем! Ты выиграл :З");
+        if (end == true) {// действие при конце игры с положительным исходом
+            System.out.println("затащил");
+            this.money += 500 + rnd.nextInt(1000-500+1);
+        }
         else { //с отрицательным
             System.out.println("игру не выиграл");
         }
