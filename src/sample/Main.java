@@ -19,8 +19,9 @@ public class Main extends Application {
 
 
     public static void main(String[] args) {
-        Student student = new Student(100,100, 100, 100);
+        launch(args);
+
+        Student student = new Student(100, 100, 100, 100);
         student.toHack();
-        //launch(args);
     }
 }
