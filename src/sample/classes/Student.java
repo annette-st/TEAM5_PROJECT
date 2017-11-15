@@ -43,35 +43,45 @@ public class Student {
 
     public void toEat() {
         int restaurant = 0;
-        int eatingPoints = 0; //кол-во сытости за один поход в кафешку
+        int eatingPoints; //кол-во сытости за один поход в кафешку
+        int energyPoints = 3 + rnd.nextInt(10-3+1); //кол-во энергии за один поход в кафешку
         switch (restaurant) {
             case 1: //добрая
                 eatingPoints = 15 + rnd.nextInt(30-15+1);
                 money -= 100 + rnd.nextInt(200-100+1);
                 if (eatingPoints + satiety > 100) satiety = 100;
                     else satiety += eatingPoints;
+                if (energyPoints + energy > 100) energy = 100;
+                else energy +=energyPoints;
             case 2: //ханума
                 eatingPoints = 20 + rnd.nextInt(40-20+1);
                 money -= 100 + rnd.nextInt(250-100+1);
                 if (eatingPoints + satiety > 100) satiety = 100;
                     else satiety += eatingPoints;
+                if (energyPoints + energy > 100) energy = 100;
+                else energy +=energyPoints;
             case 3: //дошик
                 eatingPoints = 5 + rnd.nextInt(15-5+1);
                 money -= 20 + rnd.nextInt(50-20+1);
                 if (eatingPoints + satiety > 100) satiety = 100;
                 else satiety += eatingPoints;
+                if (energyPoints + energy > 100) energy = 100;
+                else energy +=energyPoints;
             case 4: //макдональдс
                 eatingPoints = 35 + rnd.nextInt(50-35+1);
                 money -= 350 + rnd.nextInt(600-350+1);
                 if (eatingPoints + satiety > 100) satiety = 100;
                 else satiety += eatingPoints;
+                if (energyPoints + energy > 100) energy = 100;
+                else energy +=energyPoints;
             case 5: //мастер пицца
                 eatingPoints = 20 + rnd.nextInt(30-20+1);
                 money -= 100 + rnd.nextInt(140-100+1);
                 if (eatingPoints + satiety > 100) satiety = 100;
                 else satiety += eatingPoints;
+                if (energyPoints + energy > 100) energy = 100;
+                else energy +=energyPoints;
         }
-
     }
 
     public void toHack() {
