@@ -53,6 +53,7 @@ public class Student {
                     else satiety += eatingPoints;
                 if (energyPoints + energy > 100) energy = 100;
                 else energy +=energyPoints;
+                break;
             case 2: //ханума
                 eatingPoints = 20 + rnd.nextInt(40-20+1);
                 money -= 100 + rnd.nextInt(250-100+1);
@@ -60,6 +61,7 @@ public class Student {
                     else satiety += eatingPoints;
                 if (energyPoints + energy > 100) energy = 100;
                 else energy +=energyPoints;
+                break;
             case 3: //дошик
                 eatingPoints = 5 + rnd.nextInt(15-5+1);
                 money -= 20 + rnd.nextInt(50-20+1);
@@ -67,6 +69,7 @@ public class Student {
                 else satiety += eatingPoints;
                 if (energyPoints + energy > 100) energy = 100;
                 else energy +=energyPoints;
+                break;
             case 4: //макдональдс
                 eatingPoints = 35 + rnd.nextInt(50-35+1);
                 money -= 350 + rnd.nextInt(600-350+1);
@@ -74,6 +77,7 @@ public class Student {
                 else satiety += eatingPoints;
                 if (energyPoints + energy > 100) energy = 100;
                 else energy +=energyPoints;
+                break;
             case 5: //мастер пицца
                 eatingPoints = 20 + rnd.nextInt(30-20+1);
                 money -= 100 + rnd.nextInt(140-100+1);
@@ -81,6 +85,7 @@ public class Student {
                 else satiety += eatingPoints;
                 if (energyPoints + energy > 100) energy = 100;
                 else energy +=energyPoints;
+                break;
         }
     }
 
