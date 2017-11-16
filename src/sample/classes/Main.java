@@ -7,6 +7,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class Main extends Application {
+    static Tiredness tiredness; //инициализация потока
 
     @Override
     public void start(Stage primaryStage) throws Exception{
@@ -23,10 +24,13 @@ public class Main extends Application {
     }
 
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
+        tiredness = new Tiredness(); //создание потока
+        tiredness.start(); //запуск потока
         launch(args);
-
+        //Thread.sleep(20000);
         Student student = new Student(100, 100, 100, 100);
         student.toHack();
+        tiredness.stop();
     }
 }

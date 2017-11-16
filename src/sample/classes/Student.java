@@ -7,8 +7,9 @@ import java.util.Scanner;
 public class Student {
     Random rnd = new Random(System.currentTimeMillis());
     Scanner scanner = new Scanner(System.in);
-    int satiety;
-    int energy;
+
+    static int satiety;
+    static int energy;
     int university;
     int money;
 
@@ -17,16 +18,6 @@ public class Student {
         this.energy = energy;
         this.university = university;
         this.money = money;
-    }
-
-    public void tiredness() throws InterruptedException {
-        //этот метод означает, что через определенное кол-во времени человек будет уставать и голодать
-        //метод выполняется в background режиме
-        while (true) {
-            Thread.sleep(3000);
-            satiety -= 5;
-            energy -= 4;
-        }
     }
 
     public void toSleep() {
@@ -189,5 +180,39 @@ public class Student {
         else { //с отрицательным
             System.out.println("игру не выиграл");
         }
+    }
+
+    public int getSatiety() {
+        return satiety;
+    }
+
+    public static void setSatiety(int satietyPoints) {
+        satiety -= satietyPoints;
+        System.out.println(satiety);
+    }
+
+    public int getEnergy() {
+        return energy;
+    }
+
+    public static void setEnergy(int energyPoints) {
+        energy -= energyPoints;
+        System.out.println(energy);
+    }
+
+    public int getUniversity() {
+        return university;
+    }
+
+    public void setUniversity(int university) {
+        this.university = university;
+    }
+
+    public int getMoney() {
+        return money;
+    }
+
+    public void setMoney(int money) {
+        this.money = money;
     }
 }
