@@ -28,7 +28,7 @@ public class Student {
             System.out.print(output[i]); ///////////////////////////////////////////
         }
         System.out.println(" "); //////////////////////////////////////////////////
-        //цифры - коровы
+
 
 
 
@@ -59,6 +59,7 @@ public class Student {
                 input /= 10;
             }
             //нахождение коров
+            //цифры - коровы
             boolean cowdigit[] = new boolean[10];
             for (int i = 0; i < cowdigit.length; i++)
                 cowdigit[i] = false;
