@@ -55,7 +55,7 @@ public class Student {
             System.out.println();
             //ввод 4-значного числа
             System.out.println("Введите щисло");
-            int input = scanner.nextInt(); ////////////////////////////////////////////// вводимое число
+            int input = scanner.nextInt();                      // вводимое число
             int inputID[] = new int[4];
 
             // формирование числа в массив цифр
