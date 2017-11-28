@@ -50,7 +50,7 @@ public class AtmController {
     }
 
     @FXML
-    public void whatsHappenning(ActionEvent actionEvent) {
+    public void whatsHappenning() {
         try {
             Parent root = FXMLLoader.load(getClass().getResource("../fxmlFiles/modalAtm.fxml"));
             Stage stage = (Stage)questionButton.getScene().getWindow();
@@ -58,7 +58,7 @@ public class AtmController {
             stage.setScene(new Scene(root, 1000, 600));
             stage.setResizable(false);
             stage.initModality(Modality.WINDOW_MODAL);
-            stage.initOwner(((Node)actionEvent.getSource()).getScene().getWindow());
+//            stage.initOwner(questionButton.getScene().getWindow());
             stage.show();
         } catch(IOException e) {
             e.printStackTrace();
