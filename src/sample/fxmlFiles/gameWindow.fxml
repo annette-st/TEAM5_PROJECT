@@ -10,16 +10,16 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.MainController">
    <children>
-      <ProgressBar layoutX="50.0" layoutY="16.0" prefHeight="18.0" prefWidth="200.0" progress="0.39" />
+      <ProgressBar fx:id="foodBar" layoutX="50.0" layoutY="16.0" prefHeight="18.0" prefWidth="300.0" progress="0.39" />
       <AnchorPane layoutY="550.0">
          <children>
             <ToolBar prefHeight="50.0" prefWidth="1000.0">
               <items>
                   <AnchorPane>
                      <children>
-                      <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="70.0" text="Quit" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="5.0" />
+                      <Button fx:id="quitButton" mnemonicParsing="false" onAction="#exit" prefHeight="30.0" prefWidth="70.0" text="Quit" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="5.0" />
                      </children>
                   </AnchorPane>
               </items>
@@ -34,34 +34,33 @@
             <Rectangle2D />
          </viewport>
       </ImageView>
-      <ProgressBar layoutX="50.0" layoutY="45.0" prefWidth="200.0" progress="0.39" />
-      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="10.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+      <ProgressBar fx:id="energyBar" layoutX="50.0" layoutY="55.0" prefWidth="300.0" progress="0.39" />
+      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="10.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../icons/icons8-Удар молнии-48.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="10.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../icons/icons8-Кровать-48.png" />
-         </image>
-      </ImageView>
-      <ProgressBar layoutX="50.0" layoutY="76.0" prefWidth="200.0" progress="0.39" />
-      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="10.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="10.0" layoutY="90.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../icons/icons8-Отдел-48.png" />
          </image>
       </ImageView>
-      <ProgressBar layoutX="50.0" layoutY="106.0" prefWidth="200.0" progress="0.39" />
+      <ProgressBar layoutX="50.0" layoutY="96.0" prefWidth="300.0" progress="0.39" />
       <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="10.0" layoutY="130.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../icons/icons8-Рубль-48.png" />
          </image>
       </ImageView>
-      <ProgressBar layoutX="50.0" layoutY="136.0" prefWidth="200.0" progress="0.39" />
-      <Label layoutX="270.0" layoutY="10.0" prefHeight="150.0" prefWidth="720.0" text="person's status will be here">
+      <ProgressBar layoutX="50.0" layoutY="136.0" prefWidth="300.0" progress="0.39" />
+      <Label layoutX="370.0" layoutY="15.0" prefHeight="140.0" prefWidth="620.0" text="person's status will be here">
          <padding>
             <Insets left="12.0" />
          </padding>
       </Label>
+      <Button fx:id="uniButton" layoutX="75.0" layoutY="280.0" mnemonicParsing="false" onAction="#goToUni" prefHeight="40.0" prefWidth="250.0" text="Go to university" />
+      <Button fx:id="sleepButton" layoutX="75.0" layoutY="200.0" mnemonicParsing="false" onAction="#goToSleep" prefHeight="40.0" prefWidth="250.0" text="Go to sleep" />
+      <Button fx:id="hackButton" layoutX="75.0" layoutY="440.0" mnemonicParsing="false" onAction="#hack" prefHeight="40.0" prefWidth="250.0" text="Hack" />
+      <Group />
+      <Button fx:id="eatingButton" layoutX="75.0" layoutY="360.0" mnemonicParsing="false" onAction="#haveMeal" prefHeight="40.0" prefWidth="250.0" text="Have a meal" />
    </children>
 </Pane>
