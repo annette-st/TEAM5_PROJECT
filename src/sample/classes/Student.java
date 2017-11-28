@@ -223,6 +223,7 @@ public class Student {
     }
 
     //метод, который вычитает рандомное количесвто единиц у показателя(field) в переделах от min до max для денег
+
     public void randomMinusMoney(int max, int min) {
         final int MINIMUM_LEVEL = 0;
         Random rnd = new Random(System.currentTimeMillis());
@@ -231,6 +232,7 @@ public class Student {
             else System.err.println("нищеброд");
     }
     //метод, выдающий рандомное кол-во денег для игрока
+
     public void randomPlusMoney(int moneyPoints, int min, int max){
         Random rnd = new Random(System.currentTimeMillis());
         moneyPoints = min + rnd.nextInt(max-min+1);
@@ -258,6 +260,7 @@ public class Student {
             System.out.println("затрачено" + money);
         }
     }
+
     //метод ивентов с деньгами с фиксированным значением
     public void eventsMoneyMinus(int percent, int field1, int field2, int money, int max, int min) {
         Random rnd = new Random(System.currentTimeMillis());
