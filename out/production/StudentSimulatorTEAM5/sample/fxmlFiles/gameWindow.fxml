@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.*?>
 <?import javafx.scene.effect.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.*?>
@@ -9,9 +10,9 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
+      <ProgressBar layoutX="50.0" layoutY="16.0" prefHeight="18.0" prefWidth="200.0" progress="0.39" />
       <AnchorPane layoutY="550.0">
          <children>
             <ToolBar prefHeight="50.0" prefWidth="1000.0">
@@ -25,7 +26,42 @@
             </ToolBar>
          </children>
       </AnchorPane>
-      <Accordion layoutX="106.0" layoutY="121.0" />
-      <Accordion layoutX="15.0" layoutY="263.0" />
+      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../icons/icons8-Столовые%20приборы-48.png" />
+         </image>
+         <viewport>
+            <Rectangle2D />
+         </viewport>
+      </ImageView>
+      <ProgressBar layoutX="50.0" layoutY="45.0" prefWidth="200.0" progress="0.39" />
+      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="10.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../icons/icons8-Удар%20молнии-48.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="10.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../icons/icons8-Кровать-48.png" />
+         </image>
+      </ImageView>
+      <ProgressBar layoutX="50.0" layoutY="76.0" prefWidth="200.0" progress="0.39" />
+      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="10.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../icons/icons8-Отдел-48.png" />
+         </image>
+      </ImageView>
+      <ProgressBar layoutX="50.0" layoutY="106.0" prefWidth="200.0" progress="0.39" />
+      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="10.0" layoutY="130.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../icons/icons8-Рубль-48.png" />
+         </image>
+      </ImageView>
+      <ProgressBar layoutX="50.0" layoutY="136.0" prefWidth="200.0" progress="0.39" />
+      <Label layoutX="270.0" layoutY="10.0" prefHeight="150.0" prefWidth="720.0" text="person's status will be here">
+         <padding>
+            <Insets left="12.0" />
+         </padding>
+      </Label>
    </children>
 </Pane>
