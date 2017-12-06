@@ -18,7 +18,6 @@ public class Student {
         this.university = university;
         this.money = money;
     }
-
     public void toSleep() {
         randomPlus(energy,70,60);
         randomPlus(satiety,50, 30);

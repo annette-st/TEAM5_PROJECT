@@ -22,7 +22,7 @@ public class MenuController {
     }
 
     public void beginning() throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("../fxmlFiles/atmMachine.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("../fxmlFiles/gameWindow.fxml"));
         Stage stage = (Stage)startButton.getScene().getWindow();
         stage.setTitle("It's your time to hack");
         stage.setScene(new Scene(root, 1000, 600));
