@@ -18,7 +18,7 @@ public class RulesController {
     }
     @FXML
     public void goBack() throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("../fxmlFiles/mainWindow.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("../fxmlFiles/menuWindow.fxml"));
         Stage stage = (Stage)backButton.getScene().getWindow();
         stage.setTitle("The Game");
         stage.setScene(new Scene(root,1000,600));

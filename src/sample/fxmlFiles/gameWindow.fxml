@@ -10,9 +10,9 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.MainController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.GameController">
    <children>
-      <ProgressBar fx:id="foodBar" layoutX="50.0" layoutY="16.0" prefHeight="18.0" prefWidth="300.0" progress="0.39" />
+      <ProgressBar fx:id="foodBar" layoutX="50.0" layoutY="16.0" prefHeight="18.0" prefWidth="300.0" progress="1.0" />
       <AnchorPane layoutY="550.0">
          <children>
             <ToolBar prefHeight="50.0" prefWidth="1000.0">
@@ -34,7 +34,7 @@
             <Rectangle2D />
          </viewport>
       </ImageView>
-      <ProgressBar fx:id="energyBar" layoutX="50.0" layoutY="55.0" prefWidth="300.0" progress="0.39" />
+      <ProgressBar fx:id="energyBar" layoutX="50.0" layoutY="55.0" prefWidth="300.0" progress="1.0" />
       <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="10.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../icons/icons8-Удар молнии-48.png" />
@@ -45,13 +45,13 @@
             <Image url="@../../icons/icons8-Отдел-48.png" />
          </image>
       </ImageView>
-      <ProgressBar layoutX="50.0" layoutY="96.0" prefWidth="300.0" progress="0.39" />
+      <ProgressBar fx:id="uniBar" layoutX="50.0" layoutY="96.0" prefWidth="300.0" progress="1.0" />
       <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="10.0" layoutY="130.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../icons/icons8-Рубль-48.png" />
          </image>
       </ImageView>
-      <ProgressBar layoutX="50.0" layoutY="136.0" prefWidth="300.0" progress="0.39" />
+      <ProgressBar fx:id="moneyBar" layoutX="50.0" layoutY="136.0" prefWidth="300.0" progress="1.0" />
       <Label layoutX="370.0" layoutY="15.0" prefHeight="140.0" prefWidth="620.0" text="person's status will be here">
          <padding>
             <Insets left="12.0" />

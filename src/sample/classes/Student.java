@@ -269,4 +269,16 @@ public class Student {
         }
     }
 
+    public static int getSatiety() {
+        return satiety;
+    }
+    public static int getEnergy() {
+        return energy;
+    }
+    public int getUniversity() {
+        return university;
+    }
+    public int getMoney() {
+        return money;
+    }
 }
