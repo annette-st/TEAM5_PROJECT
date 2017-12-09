@@ -52,14 +52,19 @@ public class AtmController {
     @FXML
     public void whatsHappenning() {
         try {
+            Stage stage = new Stage();
             Parent root = FXMLLoader.load(getClass().getResource("../fxmlFiles/modalAtm.fxml"));
-            Stage stage = (Stage)questionButton.getScene().getWindow();
             stage.setTitle("Read and try to understand");
             stage.setScene(new Scene(root, 600, 400));
             stage.setResizable(false);
             stage.initModality(Modality.WINDOW_MODAL);
+<<<<<<< HEAD
 //            stage.initOwner(questionButton.getScene().getWindow());
 //            stage.show();
+=======
+            stage.initOwner(questionButton.getScene().getWindow());
+            stage.show();
+>>>>>>> 72d3e2cde7db3a939e7380ce8a8914dfd354c104
         } catch(IOException e) {
             e.printStackTrace();
         }
