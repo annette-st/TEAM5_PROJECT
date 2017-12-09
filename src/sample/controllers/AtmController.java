@@ -55,11 +55,11 @@ public class AtmController {
             Parent root = FXMLLoader.load(getClass().getResource("../fxmlFiles/modalAtm.fxml"));
             Stage stage = (Stage)questionButton.getScene().getWindow();
             stage.setTitle("Read and try to understand");
-            stage.setScene(new Scene(root, 1000, 600));
+            stage.setScene(new Scene(root, 600, 400));
             stage.setResizable(false);
             stage.initModality(Modality.WINDOW_MODAL);
 //            stage.initOwner(questionButton.getScene().getWindow());
-            stage.show();
+//            stage.show();
         } catch(IOException e) {
             e.printStackTrace();
         }
