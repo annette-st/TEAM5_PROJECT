@@ -30,15 +30,12 @@ public class GameController {
     ProgressBar foodBar;
     @FXML
     ProgressBar uniBar;
-    @FXML
-    ProgressBar moneyBar;
 
     @FXML
     public void initialize(){
         energyBar.setProgress(mainHero.getEnergy());
         foodBar.setProgress(mainHero.getSatiety());
         uniBar.setProgress(mainHero.getUniversity());
-        moneyBar.setProgress(mainHero.getMoney());
     }
 
 
@@ -58,7 +55,6 @@ public class GameController {
         energyBar.setProgress(mainHero.getEnergy());
         foodBar.setProgress(mainHero.getSatiety());
         uniBar.setProgress(mainHero.getUniversity());
-        moneyBar.setProgress(mainHero.getMoney());
         System.out.println("I've studied");
     }
     @FXML
@@ -67,7 +63,6 @@ public class GameController {
         energyBar.setProgress(mainHero.getEnergy());
         foodBar.setProgress(mainHero.getSatiety());
         uniBar.setProgress(mainHero.getUniversity());
-        moneyBar.setProgress(mainHero.getMoney());
         System.out.println("I've slept well");
     }
     @FXML
@@ -76,7 +71,6 @@ public class GameController {
         energyBar.setProgress(mainHero.getEnergy());
         foodBar.setProgress(mainHero.getSatiety());
         uniBar.setProgress(mainHero.getUniversity());
-        moneyBar.setProgress(mainHero.getMoney());
         System.out.println("I've eaten");
     }
     @FXML
