@@ -11,7 +11,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class menuController {
+public class MenuController {
     @FXML
     private Button rulesButton;
     @FXML
@@ -25,17 +25,17 @@ public class menuController {
         Parent root = FXMLLoader.load(getClass().getResource("../fxmlFiles/atmMachine.fxml"));
         Stage stage = (Stage)startButton.getScene().getWindow();
         stage.setTitle("It's your time to hack");
-        stage.setScene(new Scene(root, 450, 475));
-        stage.setResizable(false);
+        stage.setScene(new Scene(root, 1000, 600));
+        stage.setResizable(true);
         stage.show();
     }
 
     public void showCredits(ActionEvent actionEvent) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("../fxmlFiles/creditsWindow.fxml"));
         Stage stage = (Stage)rulesButton.getScene().getWindow();
-        stage.setTitle("Developer's Credits");
-        stage.setScene(new Scene(root, 450, 475));
-        stage.setResizable(false);
+        stage.setTitle("Developers");
+        stage.setScene(new Scene(root, 1000, 600));
+        stage.setResizable(true);
         stage.show();
     }
 
@@ -43,8 +43,8 @@ public class menuController {
         Parent root = FXMLLoader.load(getClass().getResource("../fxmlFiles/rulesWindow.fxml"));
         Stage stage = (Stage)rulesButton.getScene().getWindow();
         stage.setTitle("Game Rules");
-        stage.setScene(new Scene(root, 450, 475));
-        stage.setResizable(false);
+        stage.setScene(new Scene(root, 1000, 600));
+        stage.setResizable(true);
         stage.show();
     }
 

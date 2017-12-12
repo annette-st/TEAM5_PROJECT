@@ -7,7 +7,7 @@ public class Tiredness extends Thread{
             //метод выполняется в background режиме
             while (true) {
                 try {
-                    sleep(20000);		//Приостанавливает поток на 20 секунд
+                    sleep(30000);		//Приостанавливает поток на 20 секунд
                 } catch (InterruptedException e) {}
 
                 Student.setSatiety(5);

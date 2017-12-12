@@ -10,7 +10,7 @@ import javafx.stage.Stage;
 import java.awt.event.ActionEvent;
 import java.io.IOException;
 
-public class atmController {
+public class AtmController {
     //All navigation button are down here
     @FXML
     private Button backButton;
@@ -30,8 +30,8 @@ public class atmController {
         Parent root = FXMLLoader.load(getClass().getResource("../fxmlFiles/mainWindow.fxml"));
         Stage stage = (Stage)backButton.getScene().getWindow();
         stage.setTitle("The Game");
-        stage.setScene(new Scene(root, 450, 475));
-        stage.setResizable(false);
+        stage.setScene(new Scene(root, 1000, 600));
+        stage.setResizable(true);
         stage.show();
     }
     @FXML
@@ -39,8 +39,8 @@ public class atmController {
         Parent root = FXMLLoader.load(getClass().getResource("../fxmlFiles/rulesWindow.fxml"));
         Stage stage = (Stage)questionButton.getScene().getWindow();
         stage.setTitle("Read and try to understand");
-        stage.setScene(new Scene(root, 450, 475));
-        stage.setResizable(false);
+        stage.setScene(new Scene(root, 1000, 600));
+        stage.setResizable(true);
         stage.show();
     }
 

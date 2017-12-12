@@ -9,7 +9,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class rulesController {
+public class RulesController {
     @FXML
     private Button backButton;
 
@@ -21,8 +21,8 @@ public class rulesController {
         Parent root = FXMLLoader.load(getClass().getResource("../fxmlFiles/mainWindow.fxml"));
         Stage stage = (Stage)backButton.getScene().getWindow();
         stage.setTitle("The Game");
-        stage.setScene(new Scene(root,450,475));
-        stage.setResizable(false);
+        stage.setScene(new Scene(root,1000,600));
+        stage.setResizable(true);
         stage.show();
     }
 }

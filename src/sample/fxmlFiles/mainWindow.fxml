@@ -12,78 +12,55 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<VBox maxHeight="450.0" maxWidth="425.0" minHeight="300.0" minWidth="275.0" prefHeight="450.0" prefWidth="425.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.menuController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="600.0" minWidth="1000.0" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.MenuController">
    <children>
-      <AnchorPane prefHeight="60.0" prefWidth="274.0">
+      <AnchorPane VBox.vgrow="ALWAYS">
          <children>
-            <Label alignment="CENTER" layoutX="111.0" layoutY="5.0" prefHeight="50.0" prefWidth="193.0" text="Student Simulator" textAlignment="CENTER" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="111.0" AnchorPane.rightAnchor="111.0" AnchorPane.topAnchor="5.0">
-               <VBox.margin>
-                  <Insets bottom="10.0" left="50.0" right="50.0" top="20.0" />
-               </VBox.margin>
+            <Label alignment="CENTER" prefWidth="400.0" text="Name of the game" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="350.0" AnchorPane.rightAnchor="350.0" AnchorPane.topAnchor="15.0">
                <font>
-                  <Font size="21.0" />
+                  <Font size="27.0" />
                </font>
+               <VBox.margin>
+                  <Insets left="300.0" top="10.0" />
+               </VBox.margin>
             </Label>
          </children>
-         <VBox.margin>
-            <Insets bottom="7.0" left="5.0" right="5.0" top="15.0" />
-         </VBox.margin>
       </AnchorPane>
-      <AnchorPane prefHeight="50.0" prefWidth="108.0">
+      <AnchorPane VBox.vgrow="ALWAYS">
          <children>
-            <Button fx:id="startButton" mnemonicParsing="false" onAction="#beginning" prefHeight="25.0" prefWidth="75.0" text="Start" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="5.0">
+            <Button fx:id="startButton" maxHeight="150.0" maxWidth="600.0" minHeight="50.0" minWidth="300.0" mnemonicParsing="false" onAction="#beginning" prefHeight="50.0" prefWidth="300.0" text="Start" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="350.0" AnchorPane.rightAnchor="350.0" AnchorPane.topAnchor="35.0">
                <font>
                   <Font size="20.0" />
                </font>
-               <effect>
-                  <DropShadow />
-               </effect></Button>
+            </Button>
          </children>
-         <VBox.margin>
-            <Insets bottom="7.0" left="90.0" right="90.0" top="10.0" />
-         </VBox.margin>
       </AnchorPane>
-      <AnchorPane layoutX="100.0" layoutY="110.0" prefHeight="50.0" prefWidth="108.0">
+      <AnchorPane VBox.vgrow="ALWAYS">
          <children>
-            <Button fx:id="rulesButton" mnemonicParsing="false" onAction="#showRules" prefWidth="75.0" text="Rules" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="5.0">
+            <Button fx:id="rulesButton" maxHeight="150.0" maxWidth="600.0" minHeight="50.0" minWidth="300.0" mnemonicParsing="false" onAction="#showRules" prefHeight="50.0" prefWidth="300.0" text="Rules" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="350.0" AnchorPane.rightAnchor="350.0" AnchorPane.topAnchor="35.0">
                <font>
                   <Font size="20.0" />
                </font>
-               <effect>
-                  <DropShadow />
-               </effect></Button>
+            </Button>
          </children>
-         <VBox.margin>
-            <Insets bottom="7.0" left="90.0" right="90.0" top="15.0" />
-         </VBox.margin>
       </AnchorPane>
-      <AnchorPane layoutX="100.0" layoutY="165.0" prefHeight="50.0" prefWidth="108.0">
+      <AnchorPane VBox.vgrow="ALWAYS">
          <children>
-            <Button fx:id="creditsButton" mnemonicParsing="false" onAction="#showCredits" prefWidth="75.0" text="Credits" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="5.0">
+            <Button fx:id="creditsButton" maxHeight="150.0" maxWidth="600.0" minHeight="50.0" minWidth="300.0" mnemonicParsing="false" onAction="#showCredits" prefHeight="50.0" prefWidth="300.0" text="Creators" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="350.0" AnchorPane.rightAnchor="350.0" AnchorPane.topAnchor="35.0">
                <font>
                   <Font size="20.0" />
                </font>
-               <effect>
-                  <DropShadow />
-               </effect></Button>
+            </Button>
          </children>
-         <VBox.margin>
-            <Insets bottom="17.0" left="90.0" right="90.0" top="15.0" />
-         </VBox.margin>
       </AnchorPane>
-      <AnchorPane layoutX="10.0" layoutY="210.0" prefHeight="50.0" prefWidth="108.0">
+      <AnchorPane VBox.vgrow="ALWAYS">
          <children>
-            <Button fx:id="quitButon" mnemonicParsing="false" onAction="#quit" prefWidth="75.0" text="Quit" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="5.0">
+            <Button fx:id="quitButon" maxHeight="150.0" maxWidth="600.0" minHeight="50.0" minWidth="300.0" mnemonicParsing="false" onAction="#quit" prefHeight="50.0" prefWidth="300.0" text="Quit" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="350.0" AnchorPane.rightAnchor="350.0" AnchorPane.topAnchor="100.0">
                <font>
                   <Font size="20.0" />
                </font>
-               <effect>
-                  <DropShadow />
-               </effect></Button>
+            </Button>
          </children>
-         <VBox.margin>
-            <Insets bottom="10.0" left="90.0" right="90.0" top="25.0" />
-         </VBox.margin>
       </AnchorPane>
    </children>
 </VBox>
