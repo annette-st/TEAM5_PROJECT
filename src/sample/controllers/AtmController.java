@@ -59,12 +59,21 @@ public class AtmController {
             stage.setResizable(false);
             stage.initModality(Modality.WINDOW_MODAL);
 <<<<<<< HEAD
+
 //            stage.initOwner(questionButton.getScene().getWindow());
 //            stage.show();
+
+            stage.initOwner(questionButton.getScene().getWindow());
+            stage.show();
+
 =======
             stage.initOwner(questionButton.getScene().getWindow());
             stage.show();
->>>>>>> 72d3e2cde7db3a939e7380ce8a8914dfd354c104
+            stage.initOwner(questionButton.getScene().getWindow());
+            stage.show();
+            stage.initOwner(questionButton.getScene().getWindow());
+            stage.show();
+>>>>>>> d03f94682a41d581bb74ddd01e52a627d15f4ecd
         } catch(IOException e) {
             e.printStackTrace();
         }

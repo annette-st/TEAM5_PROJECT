@@ -26,8 +26,8 @@ public class Main extends Application {
 
     public static void main(String[] args) throws InterruptedException {
         tiredness = new Tiredness(); //создание потока
-        tiredness.start(); //запуск потока
-        launch(args);
+       // tiredness.start(); //запуск потока
+        //launch(args);
         //Thread.sleep(20000);
         Student student = new Student(100, 100, 100, 100);
         student.toHack();
