@@ -31,7 +31,7 @@ public class AtmController {
         Stage stage = (Stage)backButton.getScene().getWindow();
         stage.setTitle("The Game");
         stage.setScene(new Scene(root, 1000, 600));
-        stage.setResizable(true);
+        stage.setResizable(false);
         stage.show();
     }
     @FXML
@@ -40,7 +40,7 @@ public class AtmController {
         Stage stage = (Stage)questionButton.getScene().getWindow();
         stage.setTitle("Read and try to understand");
         stage.setScene(new Scene(root, 1000, 600));
-        stage.setResizable(true);
+        stage.setResizable(false);
         stage.show();
     }
 

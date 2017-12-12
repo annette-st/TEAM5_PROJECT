@@ -22,7 +22,7 @@ public class RulesController {
         Stage stage = (Stage)backButton.getScene().getWindow();
         stage.setTitle("The Game");
         stage.setScene(new Scene(root,1000,600));
-        stage.setResizable(true);
+        stage.setResizable(false);
         stage.show();
     }
 }

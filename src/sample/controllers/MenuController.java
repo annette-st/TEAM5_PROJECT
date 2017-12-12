@@ -26,7 +26,7 @@ public class MenuController {
         Stage stage = (Stage)startButton.getScene().getWindow();
         stage.setTitle("It's your time to hack");
         stage.setScene(new Scene(root, 1000, 600));
-        stage.setResizable(true);
+        stage.setResizable(false);
         stage.show();
     }
 
@@ -35,7 +35,7 @@ public class MenuController {
         Stage stage = (Stage)rulesButton.getScene().getWindow();
         stage.setTitle("Developers");
         stage.setScene(new Scene(root, 1000, 600));
-        stage.setResizable(true);
+        stage.setResizable(false);
         stage.show();
     }
 
@@ -44,7 +44,7 @@ public class MenuController {
         Stage stage = (Stage)rulesButton.getScene().getWindow();
         stage.setTitle("Game Rules");
         stage.setScene(new Scene(root, 1000, 600));
-        stage.setResizable(true);
+        stage.setResizable(false);
         stage.show();
     }
 

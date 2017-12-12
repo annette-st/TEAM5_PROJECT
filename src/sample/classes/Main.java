@@ -14,7 +14,7 @@ public class Main extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("../fxmlFiles/mainWindow.fxml"));
         primaryStage.setTitle("The Game");
         primaryStage.setScene(new Scene(root, 1000, 600));
-        primaryStage.setResizable(true);
+        primaryStage.setResizable(false);
         primaryStage.setMinHeight(600);
         primaryStage.setMinWidth(1000);
 //        primaryStage.setMaxHeight(475);
