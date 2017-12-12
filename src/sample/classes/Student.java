@@ -5,13 +5,12 @@ import java.util.Scanner;
 
 
 public class Student {
-    Random rnd = new Random(System.currentTimeMillis());
     Scanner scanner = new Scanner(System.in);
 
-    static int satiety;
-    static int energy;
-    int university;
-    int money;
+    static int satiety; //сытость
+    static int energy; //энергия
+    int university; // успеваемость и рейтинг в универе
+    int money; // деньги
 
     public Student(int satiety, int energy, int university, int money) {
         this.satiety = satiety;
@@ -21,79 +20,71 @@ public class Student {
     }
 
     public void toSleep() {
-        int energyPoints = 60 + rnd.nextInt(70-60+1); //кол-во энергии за один сон
-        if (energyPoints + energy > 100) energy = 100;
-            else energy +=energyPoints;
+        randomPlus(energy,70,60);
+        randomPlus(satiety,50, 30);
+        randomMinus(university, 20, 10);
+        events(15, energy, university, 50, 30);
     }
 
     public void toStudy() {
-        int universityPoints = 20 + rnd.nextInt(35-20+1);
-        if (universityPoints + university > 100) university = 100;
-            else university +=universityPoints;
+        randomMinus(university, 35, 20);
+        minusMoney(25);
+        randomMinus(energy, 40, 20);
+        randomMinus(satiety,40,20);
+        events(15, energy, university, 25, 15);
     }
 
     public void toEat() {
         int restaurant = 0;
-        int eatingPoints; //кол-во сытости за один поход в кафешку
-        int energyPoints = 3 + rnd.nextInt(10-3+1); //кол-во энергии за один поход в кафешку
+        int medicine = 0;
         switch (restaurant) {
             case 1: //добрая
-                eatingPoints = 15 + rnd.nextInt(30-15+1);
-                money -= 100 + rnd.nextInt(200-100+1);
-                if (eatingPoints + satiety > 100) satiety = 100;
-                    else satiety += eatingPoints;
-                if (energyPoints + energy > 100) energy = 100;
-                else energy +=energyPoints;
+                randomMinusMoney(200, 100);
+                randomPlus(energy,5,2);
+                randomPlus(satiety,30, 15);
+                events(15, university, energy, medicine,40, 30, 400, 200);
                 break;
             case 2: //ханума
-                eatingPoints = 20 + rnd.nextInt(40-20+1);
-                money -= 100 + rnd.nextInt(250-100+1);
-                if (eatingPoints + satiety > 100) satiety = 100;
-                    else satiety += eatingPoints;
-                if (energyPoints + energy > 100) energy = 100;
-                else energy +=energyPoints;
+                randomMinusMoney(250,100);
+                randomPlus(energy, 7, 4);
+                randomPlus(satiety, 40, 20);
+                events(15, university, energy, medicine,40, 30, 400, 200);
                 break;
             case 3: //дошик
-                eatingPoints = 5 + rnd.nextInt(15-5+1);
-                money -= 20 + rnd.nextInt(50-20+1);
-                if (eatingPoints + satiety > 100) satiety = 100;
-                else satiety += eatingPoints;
-                if (energyPoints + energy > 100) energy = 100;
-                else energy +=energyPoints;
+                randomMinusMoney(50, 20);
+                randomPlus(energy,3,1);
+                randomPlus(satiety,15, 5);
+                events(15, university, energy, medicine,40, 30, 400, 200);
                 break;
             case 4: //макдональдс
-                eatingPoints = 35 + rnd.nextInt(50-35+1);
-                money -= 350 + rnd.nextInt(600-350+1);
-                if (eatingPoints + satiety > 100) satiety = 100;
-                else satiety += eatingPoints;
-                if (energyPoints + energy > 100) energy = 100;
-                else energy +=energyPoints;
+                randomMinusMoney(600, 350);
+                randomPlus(energy,10,5);
+                randomPlus(satiety,50, 35);
+                events(15, university, energy, medicine,40, 30, 400, 200);
                 break;
             case 5: //мастер пицца
-                eatingPoints = 20 + rnd.nextInt(30-20+1);
-                money -= 100 + rnd.nextInt(140-100+1);
-                if (eatingPoints + satiety > 100) satiety = 100;
-                else satiety += eatingPoints;
-                if (energyPoints + energy > 100) energy = 100;
-                else energy +=energyPoints;
+                randomMinusMoney(140, 100);
+                randomPlus(energy,5,2);
+                randomPlus(satiety,30, 20);
+                events(15, university, energy, medicine,40, 30, 400, 200);
                 break;
         }
     }
 
     public void toHack() {
 
+        Random rnd = new Random(System.currentTimeMillis());
         final int ATTEMPTS = 4; //кол-во попыток
         boolean end = false; // конец игры (true - игра кончилась с положительным исходом, false - с отрицательным)
         //что будет выводиться
+
         char output[] = new char[4];
+
         for (int i = 0; i <output.length; i++) {
             output[i] = '*';
             System.out.print(output[i]); ///////////////////////////////////////////
         }
         System.out.println(" "); //////////////////////////////////////////////////
-
-
-
 
         int cardID[] = new int[4];
         //генерация рандомного числа
@@ -135,25 +126,16 @@ public class Student {
                     }
                 }
             //нахождение быков
-            if (inputID[0] == cardID[0]) {
-                output[0] = Character.forDigit(inputID[0], 10);
-                cowdigit[inputID[0]] = false;
-            }
-            if (inputID[1] == cardID[1]) {
-                output[1] = Character.forDigit(inputID[1], 10);
-                cowdigit[inputID[1]] = false;
-            }
-            if (inputID[2] == cardID[2]) {
-                output[2] = Character.forDigit(inputID[2], 10);
-                cowdigit[inputID[2]] = false;
-            }
-            if (inputID[3] == cardID[3]) {
-                output[3] = Character.forDigit(inputID[3], 10);
-                cowdigit[inputID[3]] = false;
+            for (int i = 0; i < cardID.length; i++) {
+                if (inputID[i] == cardID[i]) {
+                    output[i] = Character.forDigit(inputID[i], 10);
+                    cowdigit[inputID[i]] = false;
+                }
             }
 
             //высчитывание конца игры(проверка на полное совпадение 2 кодов - рандомного и вводимого)
             end = true;
+
             for (int i = 0; i < cardID.length; i++) {
                 if (output[i] != Character.forDigit(cardID[i], 10))
                     end &= false;
@@ -174,16 +156,35 @@ public class Student {
         }
 
         if (end == true) {// действие при конце игры с положительным исходом
-            System.out.println("затащил");
-            this.money += 500 + rnd.nextInt(1000-500+1);
+            randomMinus(energy, 50, 40);
+            randomMinus(satiety, 40, 30);
+            randomMinus(university, 20, 10);
+            int moneyPoints = 0;
+            switch (thisAttempt){
+                case 6:
+                    randomPlusMoney(moneyPoints, 150, 100);
+                case 5:
+                    randomPlusMoney(moneyPoints, 150, 100);
+                case 4:
+                    randomPlusMoney(moneyPoints, 150, 100);
+                case 3:
+                    randomPlusMoney(moneyPoints, 150, 100);
+                case 2:
+                    randomPlusMoney(moneyPoints, 150, 100);
+                case 1:
+                    randomPlusMoney(moneyPoints, 150, 100);
+                case 0:
+                    randomPlusMoney(moneyPoints, 150, 100);
+            }
+            eventsMoneyMinus(15, university, energy, moneyPoints, 30, 15);
+            System.out.println(":)");
         }
         else { //с отрицательным
-            System.out.println("игру не выиграл");
+            randomMinus(energy, 50, 40);
+            randomMinus(satiety, 40, 30);
+            randomMinus(university, 20, 10);
+            System.out.println(":(");
         }
-    }
-
-    public int getSatiety() {
-        return satiety;
     }
 
     public static void setSatiety(int satietyPoints) {
@@ -191,28 +192,82 @@ public class Student {
         System.out.println(satiety);
     }
 
-    public int getEnergy() {
-        return energy;
-    }
-
     public static void setEnergy(int energyPoints) {
         energy -= energyPoints;
         System.out.println(energy);
     }
 
-    public int getUniversity() {
-        return university;
+    //метод, который добавляет рандомное количесвто единиц к показателю(field) в переделах от min до max
+    public void randomPlus(int field, int max, int min) {
+        final int MAXIMUM_LEVEL = 100;
+        Random rnd = new Random(System.currentTimeMillis());
+        int fieldPoints = min + rnd.nextInt(max-min+1);
+        if (fieldPoints + field > MAXIMUM_LEVEL) field = MAXIMUM_LEVEL;
+            else field += fieldPoints;
     }
 
-    public void setUniversity(int university) {
-        this.university = university;
+    //метод, который вычитает рандомное количесвто единиц у показателя(field) в переделах от min до max
+    public void randomMinus(int field, int max, int min) {
+        final int MINIMUM_LEVEL = 0;
+        Random rnd = new Random(System.currentTimeMillis());
+        int fieldPoints = min + rnd.nextInt(max-min+1);
+        if (field - fieldPoints < MINIMUM_LEVEL) field = MINIMUM_LEVEL;
+        else field -= fieldPoints;
     }
 
-    public int getMoney() {
-        return money;
+    //метод, который вычитает определенное количесвто единиц(value) от показателя(field) для денег
+    public void minusMoney(int value) {
+        final int MINIMUM_LEVEL = 0;
+        if (money - value < MINIMUM_LEVEL) money = MINIMUM_LEVEL;
+        else money -= value;
     }
 
-    public void setMoney(int money) {
-        this.money = money;
+    //метод, который вычитает рандомное количесвто единиц у показателя(field) в переделах от min до max для денег
+    public void randomMinusMoney(int max, int min) {
+        final int MINIMUM_LEVEL = 0;
+        Random rnd = new Random(System.currentTimeMillis());
+        int fieldPoints = min + rnd.nextInt(max-min+1);
+        if (money - fieldPoints > MINIMUM_LEVEL) money -= fieldPoints;
+            else System.err.println("нищеброд");
     }
+    //метод, выдающий рандомное кол-во денег для игрока
+    public void randomPlusMoney(int moneyPoints, int min, int max){
+        Random rnd = new Random(System.currentTimeMillis());
+        moneyPoints = min + rnd.nextInt(max-min+1);
+    }
+
+    //методы ивентов
+    public void events(int percent, int field1, int field2, int max, int min) {
+        Random rnd = new Random(System.currentTimeMillis());
+        int generatedPercent = rnd.nextInt(101);
+        if (generatedPercent <= percent) {
+            randomMinus(field1, max, min);
+            randomMinus(field2, max, min);
+        }
+    }
+
+    //метод ивентов с деньгами
+    public void events(int percent, int field1, int field2, int money, int max, int min, int maxMoney, int minMoney) {
+        Random rnd = new Random(System.currentTimeMillis());
+        int generatedPercent = rnd.nextInt(101);
+        if (generatedPercent <= percent) {
+            randomMinus(field1, max, min);
+            randomMinus(field2, max, min);
+            money = minMoney + rnd.nextInt(maxMoney - minMoney + 1);
+            minusMoney(money);
+            System.out.println("затрачено" + money);
+        }
+    }
+    //метод ивентов с деньгами с фиксированным значением
+    public void eventsMoneyMinus(int percent, int field1, int field2, int money, int max, int min) {
+        Random rnd = new Random(System.currentTimeMillis());
+        int generatedPercent = rnd.nextInt(101);
+        if (generatedPercent <= percent){
+            randomMinus(field1, max, min);
+            randomMinus(field2, max, min);
+            minusMoney(money);
+            System.out.println("затрачено" + money);
+        }
+    }
+
 }
