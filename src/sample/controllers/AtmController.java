@@ -60,6 +60,8 @@ public class AtmController {
             stage.initModality(Modality.WINDOW_MODAL);
             stage.initOwner(questionButton.getScene().getWindow());
             stage.show();
+            stage.initOwner(questionButton.getScene().getWindow());
+            stage.show();
         } catch(IOException e) {
             e.printStackTrace();
         }
