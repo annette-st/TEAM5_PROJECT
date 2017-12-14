@@ -11,7 +11,7 @@ public class Student {
 
     static double satiety; //сытость
     static double energy; //энергия
-    static double university; // успеваемость и рейтинг в универе
+    static double university; // успеваемость и рейтинг в универе ы
     int money; // деньги
     int input; // number entered in ATM when hacking
 
