@@ -242,8 +242,8 @@ public class Student {
         final int MINIMUM_LEVEL = 0;
         Random rnd = new Random(System.currentTimeMillis());
         int fieldPoints = min + rnd.nextInt(max-min+1);
-        if (money - fieldPoints < MINIMUM_LEVEL) money -= fieldPoints;
-            else System.err.println("нищеброд");
+        if (money - fieldPoints < MINIMUM_LEVEL) money = 0;
+            else money -= fieldPoints;
     }
     //метод, выдающий рандомное кол-во денег для игрока
     public int randomPlusMoney(int moneyPoints, int min, int max){
