@@ -10,74 +10,85 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.AtmController">
    <children>
-      <ToolBar layoutY="550.0" prefHeight="50.0" prefWidth="1000.0" />
-      <Button layoutX="342.0" layoutY="265.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="55.0" text="1">
+      <ToolBar layoutY="550.0" prefHeight="50.0" prefWidth="1000.0">
+         <items>
+            <AnchorPane prefHeight="40.0">
+               <children>
+                  <Button fx:id="exitButton" mnemonicParsing="false" onAction="#exit" prefHeight="30.0" prefWidth="70.0" text="Quit" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="5.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane>
+               <children>
+                  <Button fx:id="questionButton" mnemonicParsing="false" onAction="#whatsHappenning" prefHeight="30.0" prefWidth="30.0" text="?" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="854.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="5.0" />
+               </children>
+            </AnchorPane>
+         </items></ToolBar>
+      <Button fx:id="insertButtonOne" layoutX="342.0" layoutY="265.0" mnemonicParsing="false" onAction="#insertOne" prefHeight="55.0" prefWidth="55.0" text="1">
          <font>
             <Font name="System Bold" size="23.0" />
          </font>
       </Button>
-      <Button layoutX="342.0" layoutY="325.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="55.0" text="4">
+      <Button fx:id="insertButtonFour" layoutX="342.0" layoutY="325.0" mnemonicParsing="false" onAction="#insertFour" prefHeight="55.0" prefWidth="55.0" text="4">
          <font>
             <Font name="System Bold" size="23.0" />
          </font>
       </Button>
-      <Button layoutX="342.0" layoutY="385.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="55.0" text="7">
+      <Button fx:id="insertButtonSeven" layoutX="342.0" layoutY="385.0" mnemonicParsing="false" onAction="#insertSeven" prefHeight="55.0" prefWidth="55.0" text="7">
          <font>
             <Font name="System Bold" size="23.0" />
          </font>
       </Button>
       <Button disable="true" layoutX="342.0" layoutY="445.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="55.0" />
-      <Button layoutX="402.0" layoutY="265.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="55.0" text="2">
+      <Button fx:id="insertButtonTwo" layoutX="402.0" layoutY="265.0" mnemonicParsing="false" onAction="#insertTwo" prefHeight="55.0" prefWidth="55.0" text="2">
          <font>
             <Font name="System Bold" size="23.0" />
          </font>
       </Button>
-      <Button layoutX="402.0" layoutY="325.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="55.0" text="5">
+      <Button fx:id="insertButtonFive" layoutX="402.0" layoutY="325.0" mnemonicParsing="false" onAction="#insertFive" prefHeight="55.0" prefWidth="55.0" text="5">
          <font>
             <Font name="System Bold" size="23.0" />
          </font>
       </Button>
-      <Button layoutX="402.0" layoutY="385.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="55.0" text="8">
+      <Button fx:id="insertButtonEight" layoutX="402.0" layoutY="385.0" mnemonicParsing="false" onAction="#insertEight" prefHeight="55.0" prefWidth="55.0" text="8">
          <font>
             <Font name="System Bold" size="23.0" />
          </font>
       </Button>
       <Button disable="true" layoutX="462.0" layoutY="445.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="55.0" />
-      <Button layoutX="462.0" layoutY="265.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="55.0" text="3">
+      <Button fx:id="insertThree" layoutX="462.0" layoutY="265.0" mnemonicParsing="false" onAction="#insertThree" prefHeight="55.0" prefWidth="55.0" text="3">
          <font>
             <Font name="System Bold" size="23.0" />
          </font>
       </Button>
-      <Button layoutX="462.0" layoutY="325.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="55.0" text="6">
+      <Button fx:id="insertButtonSix" layoutX="462.0" layoutY="325.0" mnemonicParsing="false" onAction="#insertSix" prefHeight="55.0" prefWidth="55.0" text="6">
          <font>
             <Font name="System Bold" size="23.0" />
          </font>
       </Button>
-      <Button layoutX="462.0" layoutY="385.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="55.0" text="9">
+      <Button fx:id="insertButtonNine" layoutX="462.0" layoutY="385.0" mnemonicParsing="false" onAction="#insertNine" prefHeight="55.0" prefWidth="55.0" text="9">
          <font>
             <Font name="System Bold" size="23.0" />
          </font>
       </Button>
-      <Button layoutX="402.0" layoutY="445.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="55.0" text="0">
+      <Button fx:id="insertButtonZero" layoutX="402.0" layoutY="445.0" mnemonicParsing="false" onAction="#insertZero" prefHeight="55.0" prefWidth="55.0" text="0">
          <font>
             <Font name="System Bold" size="23.0" />
          </font>
       </Button>
-      <Button alignment="BASELINE_LEFT" layoutX="548.0" layoutY="265.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="110.0" text=" Cancel">
+      <Button fx:id="backButton" alignment="BASELINE_LEFT" layoutX="548.0" layoutY="265.0" mnemonicParsing="false" onAction="#back" prefHeight="55.0" prefWidth="110.0" text=" Cancel">
          <font>
             <Font size="13.0" />
          </font>
       </Button>
-      <Button alignment="BASELINE_LEFT" layoutX="548.0" layoutY="325.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="110.0" text=" Clear">
+      <Button fx:id="clearButton" alignment="BASELINE_LEFT" layoutX="548.0" layoutY="325.0" mnemonicParsing="false" onAction="#cancelInput" prefHeight="55.0" prefWidth="110.0" text=" Clear">
          <font>
             <Font size="13.0" />
          </font>
       </Button>
       <Button alignment="BASELINE_LEFT" disable="true" layoutX="548.0" layoutY="385.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="110.0" />
-      <Button alignment="BASELINE_LEFT" layoutX="548.0" layoutY="445.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="110.0" text=" Enter">
+      <Button fx:id="enterButton" alignment="BASELINE_LEFT" layoutX="548.0" layoutY="445.0" mnemonicParsing="false" onAction="#enterInput" prefHeight="55.0" prefWidth="110.0" text=" Enter">
          <font>
             <Font size="13.0" />
          </font>
@@ -127,6 +138,7 @@
             <Image url="@../../icons/icons8-клавиша-ввода-50.png" />
          </image>
       </ImageView>
-      <Label layoutX="328.0" layoutY="79.0" text="Enter your PIN:" textFill="WHITE" />
+      <Label layoutX="390.0" layoutY="80.0" text="Enter your PIN:" textFill="WHITE" />
+      <Label fx:id="enteredText" layoutX="556.0" layoutY="80.0" prefWidth="100.0" textFill="WHITE" />
    </children>
 </Pane>
