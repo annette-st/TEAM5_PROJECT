@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ToolBar layoutY="550.0" prefHeight="50.0" prefWidth="1000.0">
+        <items>
+            <AnchorPane>
+               <children>
+                <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="70.0" text="&lt; Back" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="5.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane>
+               <children>
+                  <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="?" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="854.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="5.0" />
+               </children>
+            </AnchorPane>
+        </items>
+      </ToolBar>
+      <ImageView fitHeight="550.0" fitWidth="1000.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../icons/Без%20имени-2.jpg" />
+         </image>
+      </ImageView>
+      <Button mnemonicParsing="false" opacity="0.0" prefHeight="274.0" prefWidth="329.0" />
+      <Button layoutX="336.0" mnemonicParsing="false" opacity="0.0" prefHeight="274.0" prefWidth="329.0" />
+      <Button layoutX="671.0" mnemonicParsing="false" opacity="0.0" prefHeight="274.0" prefWidth="329.0" />
+      <Button layoutY="279.0" mnemonicParsing="false" opacity="0.0" prefHeight="274.0" prefWidth="329.0" />
+      <Button layoutX="336.0" layoutY="279.0" mnemonicParsing="false" opacity="0.0" prefHeight="274.0" prefWidth="329.0" />
+      <Button layoutX="671.0" layoutY="279.0" mnemonicParsing="false" opacity="0.0" prefHeight="274.0" prefWidth="329.0" />
+   </children>
+</Pane>
