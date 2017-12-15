@@ -31,9 +31,15 @@ public class Student {
     public void toStudy() {
         university = randomPlus(university, 15, 10);
         minusMoney(25);
+<<<<<<< HEAD
 
         energy = randomMinus(energy, 10, 5);
         satiety = randomMinus(satiety, 15, 10);
+=======
+        energy = randomMinus(energy, 10, 5);
+        satiety = randomMinus(satiety,15,10);
+        events(15, energy, university, 25, 15);
+>>>>>>> a97f345d49fd3c0019ae3cbf232e75af4ed5bb20
     }
 
     public void toEat() {

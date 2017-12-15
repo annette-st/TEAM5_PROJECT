@@ -15,7 +15,11 @@ import java.io.IOException;
 
 public class GameController {
 
+<<<<<<< HEAD
     public static Student mainHero = new Student(0.7,0.7,0.7,200);
+=======
+    public Student mainHero = new Student(0.7,0.7,0.7,200);
+>>>>>>> a97f345d49fd3c0019ae3cbf232e75af4ed5bb20
     @FXML
     public Label moneyLabel;
     @FXML
