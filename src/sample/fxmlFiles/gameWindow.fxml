@@ -61,12 +61,12 @@
         <Button fx:id="hackButton" layoutX="75.0" layoutY="440.0" mnemonicParsing="false" onAction="#hack" prefHeight="40.0" prefWidth="250.0" text="Hack" />
         <Group />
         <Button fx:id="eatingButton" layoutX="75.0" layoutY="360.0" mnemonicParsing="false" onAction="#haveMeal" prefHeight="40.0" prefWidth="250.0" text="Have a meal" />
-        <Label layoutX="50.0" layoutY="135.0" prefHeight="20.0" prefWidth="75.0" text="Money">
+        <Label alignment="CENTER" layoutX="50.0" layoutY="135.0" prefHeight="20.0" prefWidth="75.0" text="Money">
             <font>
                 <Font size="15.0" />
             </font>
         </Label>
-        <Label fx:id="moneyLabel" layoutX="172.0" layoutY="135.0" prefHeight="20.0" prefWidth="75.0" text="150">
+        <Label fx:id="moneyLabel" alignment="CENTER" layoutX="172.0" layoutY="135.0" prefHeight="21.0" prefWidth="123.0" text="200">
             <font>
                 <Font size="15.0" />
             </font>
