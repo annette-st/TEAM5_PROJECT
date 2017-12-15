@@ -120,13 +120,13 @@ public class AtmController {
         gameController.setEnter(true);
     }
 
-    public void writeToFile() {
-
-        FileWriter writer = new FileWriter("output.txt");
-
-
-
-         writer.close();
+    public void writeToFile(int c) {
+        try {
+            FileWriter writer = new FileWriter("input.txt");
+            writer.write(c);
+            writer.close();
+        }
+        catch (IOException e) {}
     }
 
 
