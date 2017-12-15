@@ -14,8 +14,16 @@ import sample.classes.Student;
 import java.io.IOException;
 
 public class GameController {
-    
-    public static Student mainHero = new Student(0.7,0.7,0.7,200);
+
+    int[] inputID = new int[]{0, 0, 0, 0};
+
+    int input = 10;
+
+    boolean enter = false;
+    int count = 0;
+    //Thread th = new
+
+    public static Student mainHero = new Student(0.7, 0.7, 0.7, 200);
 
     @FXML
     public Label moneyLabel;
@@ -38,23 +46,73 @@ public class GameController {
     ProgressBar uniBar;
 
     @FXML
-    public void initialize(){
+    public void initialize() {
         energyBar.setProgress(mainHero.getEnergy());
         foodBar.setProgress(mainHero.getSatiety());
         uniBar.setProgress(mainHero.getUniversity());
     }
 
     @FXML
-    public void hack() throws IOException{
+    public void hack() throws IOException, InterruptedException {
         Parent root = FXMLLoader.load(getClass().getResource("../fxmlFiles/AtmMachine.fxml"));
-        Stage stage = (Stage)hackButton.getScene().getWindow();
+        Stage stage = (Stage) hackButton.getScene().getWindow();
         stage.setTitle("It's Time to Hack");
         stage.setScene(new Scene(root, 1000, 600));
         stage.setResizable(false);
         stage.show();
+
+        int[] cardID = mainHero.toHackGeneration();
+
+
+        //Random rnd = new Random(System.currentTimeMillis());
+        final int ATTEMPTS = 4; //кол-во попыток
+
+        boolean end = false; // конец игры (true - игра кончилась с положительным исходом, false - с отрицательным)
+        //что будет выводиться
+
+
+        //попытка на который сейчас игрок
+        int thisAttempt;
+        //игра
+        for (thisAttempt = 0; thisAttempt < ATTEMPTS; thisAttempt++) {
+
+            char[] output = mainHero.toHackBulls(inputID, cardID);
+
+            for (int i = 0; i < output.length; i++) {
+                System.out.print(output[i]);
+            }
+
+            boolean cowdigit[] = mainHero.getCowdigit();
+
+            System.out.println(" ");
+            System.out.print("Коровы: ");
+            for (int i = 0; i < cowdigit.length; i++) {
+                if (cowdigit[i] == true)
+                    System.out.print(i + " ");
+            }
+
+            //высчитывание конца игры(проверка на полное совпадение 2 кодов - рандомного и вводимого)
+            end = true;
+            for (int i = 0; i < cardID.length; i++) {
+                if (output[i] != Character.forDigit(cardID[i], 10))
+                    end &= false;
+            }
+
+            if (end == true) break;
+
+
+            //принты
+
+
+//            System.out.println(" ");
+//            for(int i = 0; i < inputID.length; i++) {
+//                System.out.println(inputID[i]);
+//            }
+        }
     }
+
     @FXML
-    public void goToUni() throws IOException{
+    public void goToUni() throws IOException {
         mainHero.toStudy();
         energyBar.setProgress(mainHero.getEnergy());
         foodBar.setProgress(mainHero.getSatiety());
@@ -63,8 +121,9 @@ public class GameController {
 
         System.out.println("I've studied");
     }
+
     @FXML
-    public void goToSleep() throws IOException{
+    public void goToSleep() throws IOException {
         mainHero.toSleep();
         energyBar.setProgress(mainHero.getEnergy());
         foodBar.setProgress(mainHero.getSatiety());
@@ -72,8 +131,9 @@ public class GameController {
         moneyLabel.setText(String.valueOf(mainHero.getMoney()));
         System.out.println("I've slept well");
     }
+
     @FXML
-    public void haveMeal() throws IOException{
+    public void haveMeal() throws IOException {
         mainHero.toEat();
         energyBar.setProgress(mainHero.getEnergy());
         foodBar.setProgress(mainHero.getSatiety());
@@ -81,6 +141,7 @@ public class GameController {
         moneyLabel.setText(String.valueOf(mainHero.getMoney()));
         System.out.println("I've eaten");
     }
+
     @FXML
     public void exit() {
         try {
@@ -92,9 +153,26 @@ public class GameController {
             stage.initModality(Modality.WINDOW_MODAL);
             stage.initOwner(quitButton.getScene().getWindow());
             stage.show();
-        } catch(IOException e) {
+        } catch (IOException e) {
 //            e.printStackTrace();
             System.out.println("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
         }
     }
+
+    public void setInput(int input) {
+        this.input = input;
+    }
+
+    public void setEnter(boolean enter) {
+        this.enter = enter;
+    }
+
+    public void settingTheInputID(){
+        int i = 0;
+        while (i<4) {
+            if (input != 10)
+        }
+    }
+
+
 }

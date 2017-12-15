@@ -8,6 +8,7 @@ import javafx.stage.Stage;
 
 public class Main extends Application {
     static Tiredness tiredness; //инициализация потока
+    //Student student = new Student(1,1,1,100);
 
     @Override
     public void start(Stage primaryStage) throws Exception{
@@ -31,5 +32,8 @@ public class Main extends Application {
         //Student student = new Student(1,1,1, 100);
         //student.toHack();
         tiredness.stop();
+       // for (int x: student.toHackGeneration()) {
+         //   System.out.println(x);
+        }
     }
-}
+

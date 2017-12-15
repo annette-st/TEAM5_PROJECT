@@ -15,6 +15,12 @@ public class Student {
     int money; // деньги
     int input; // number entered in ATM when hacking
 
+    boolean cowdigit[] = new boolean[10];
+
+    public boolean[] getCowdigit() {
+        return cowdigit;
+    }
+
     public Student(double satiety, double energy, double university, int money) {
         this.satiety = satiety;
         this.energy = energy;
@@ -31,15 +37,12 @@ public class Student {
     public void toStudy() {
         university = randomPlus(university, 15, 10);
         minusMoney(25);
-<<<<<<< HEAD
+
 
         energy = randomMinus(energy, 10, 5);
-        satiety = randomMinus(satiety, 15, 10);
-=======
-        energy = randomMinus(energy, 10, 5);
-        satiety = randomMinus(satiety,15,10);
+        satiety = randomMinus(satiety, 15, 10);;
         events(15, energy, university, 25, 15);
->>>>>>> a97f345d49fd3c0019ae3cbf232e75af4ed5bb20
+
     }
 
     public void toEat() {
@@ -85,24 +88,42 @@ public class Student {
     }
 
 
-    public void toHack(int inputID[]) {
+    public char[] toHackBulls(int inputID[], int cardID[]) {
+        char[] output = new char[]{'*','*','*','*'};
 
-        Random rnd = new Random(System.currentTimeMillis());
-        final int ATTEMPTS = 4; //кол-во попыток
-        boolean end = false; // конец игры (true - игра кончилась с положительным исходом, false - с отрицательным)
-        //что будет выводиться
+//        for (int i = 0; i <output.length; i++) {
+//            output[i] = '*';
+//            System.out.print(output[i]); ///////////////////////////////////////////
+//        }
+        //нахождение коров
+        //цифры - коровы
 
-        char output[] = new char[4];
+        for (int i = 0; i < cowdigit.length; i++)
+            cowdigit[i] = false;
 
-        for (int i = 0; i <output.length; i++) {
-            output[i] = '*';
-            System.out.print(output[i]); ///////////////////////////////////////////
+        for (int i = 0; i < cardID.length; i++)
+            for (int j = 0; j < inputID.length; j++) {
+                if (cardID[i] == inputID[j] && i != j ) {
+                    cowdigit[cardID[i]] = true;
+                }
+            }
+        //нахождение быков
+        for (int i = 0; i < cardID.length; i++) {
+            if (inputID[i] == cardID[i]) {
+                output[i] = Character.forDigit(inputID[i], 10);
+                cowdigit[inputID[i]] = false;
+            }
         }
-        System.out.println(" "); //////////////////////////////////////////////////
+        return output;
+    }
 
-        int cardID[] = new int[4];
-        //генерация рандомного числа
+
+    public int[] toHackGeneration() {
+
+        int[] cardID = new int[4];
+        Random rnd = new Random(System.currentTimeMillis());
         boolean digits[] = new boolean[10];
+
         for (int i = 0; i < digits.length; i++)
             digits[i] = true;
         for (int i = 0; i < cardID.length; i++) {
@@ -112,100 +133,9 @@ public class Student {
             while (digits[cardID[i]] != true);
             digits[cardID[i]] = false;
         }
-        //попытка на который сейчас игрок
-        int thisAttempt;
-        //игра
-        for (thisAttempt = 0; thisAttempt < ATTEMPTS; thisAttempt++) {
-
-            //ввод 4-значного числа
-            System.out.println("Введите щисло");
-            //input =
-            // вводимое число
-
-            // формирование числа в массив цифр
-            for (int i = 0; i < inputID.length; i++) {
-                inputID[inputID.length - i -1] = input;
-            }
-//            for (int i = 0; i < inputID.length; i++) {
-//                inputID[inputID.length - i -1] = input % 10;
-//                input /= 10;
-//            }
-            //нахождение коров
-            //цифры - коровы
-            boolean cowdigit[] = new boolean[10];
-            for (int i = 0; i < cowdigit.length; i++)
-                cowdigit[i] = false;
-
-            for (int i = 0; i < cardID.length; i++)
-                for (int j = 0; j < inputID.length; j++) {
-                    if (cardID[i] == inputID[j] && i != j ) {
-                        cowdigit[cardID[i]] = true;
-                    }
-                }
-            //нахождение быков
-            for (int i = 0; i < cardID.length; i++) {
-                if (inputID[i] == cardID[i]) {
-                    output[i] = Character.forDigit(inputID[i], 10);
-                    cowdigit[inputID[i]] = false;
-                }
-            }
-
-            //высчитывание конца игры(проверка на полное совпадение 2 кодов - рандомного и вводимого)
-            end = true;
-
-            for (int i = 0; i < cardID.length; i++) {
-                if (output[i] != Character.forDigit(cardID[i], 10))
-                    end &= false;
-            }
-            if (end == true) break;
-
-            //принты
-            for (int i = 0; i < output.length; i++) {
-                System.out.print(output[i]);
-            }
-            System.out.println(" ");
-            System.out.print("Коровы: ");
-            for (int i = 0; i < cowdigit.length; i++){
-                if (cowdigit[i] == true)
-                    System.out.print(i + " ");
-            }
-            System.out.println(" ");
-            for(int i = 0; i < inputID.length; i++) {
-                System.out.println(inputID[i]);
-            }
-        }
-
-        if (end == true) {// действие при конце игры с положительным исходом
-            energy = randomMinus(energy, 50, 40);
-            satiety = randomMinus(satiety, 40, 30);
-            university = randomMinus(university, 20, 10);
-            int moneyPoints = 0;
-            switch (thisAttempt){
-                case 6:
-                    randomPlusMoney(moneyPoints, 150, 100);
-                case 5:
-                    randomPlusMoney(moneyPoints, 150, 100);
-                case 4:
-                    randomPlusMoney(moneyPoints, 150, 100);
-                case 3:
-                    randomPlusMoney(moneyPoints, 150, 100);
-                case 2:
-                    randomPlusMoney(moneyPoints, 150, 100);
-                case 1:
-                    randomPlusMoney(moneyPoints, 150, 100);
-                case 0:
-                    randomPlusMoney(moneyPoints, 150, 100);
-            }
-            eventsMoneyMinus(15, university, energy, moneyPoints, 30, 15);
-            System.out.println(":)");
-        }
-        else { //с отрицательным
-            energy = randomMinus(energy, 50, 40);
-            satiety = randomMinus(satiety, 40, 30);
-            university = randomMinus(university, 20, 10);
-            System.out.println(":(");
-        }
+        return cardID;
     }
+
 
     public static void setSatiety(double satietyPoints) {
         satiety -= satietyPoints * 0.01;
