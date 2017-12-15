@@ -1,5 +1,4 @@
 package sample.controllers;
-
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -8,6 +7,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+import java.io.FileWriter;
 import sample.controllers.GameController;
 
 import java.io.IOException;
@@ -119,5 +119,15 @@ public class AtmController {
     public void enterInput() {
         gameController.setEnter(true);
     }
+
+    public void writeToFile() {
+
+        FileWriter writer = new FileWriter("output.txt");
+
+
+
+         writer.close();
+    }
+
 
 }
