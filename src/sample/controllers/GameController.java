@@ -11,11 +11,18 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import sample.classes.Student;
 
+import java.io.FileReader;
 import java.io.IOException;
 
 public class GameController {
 
     int[] inputID = new int[]{0, 0, 0, 0};
+
+    public void setEnteredNumber(int enteredNumber) {
+        this.enteredNumber = enteredNumber;
+    }
+
+    public int enteredNumber;
 
     int input = 10;
 
@@ -76,7 +83,21 @@ public class GameController {
         //игра
         for (thisAttempt = 0; thisAttempt < ATTEMPTS; thisAttempt++) {
 
-            char[] output = mainHero.toHackBulls(inputID, cardID);
+            int c;
+//            try (FileReader reader = new FileReader("src/input.txt")) {
+//                // читаем посимвольно
+//                int k = 0;
+//                do {
+//                    c = reader.read();
+//                    System.out.print((char) c);
+//                    k++;
+//                } while (!enter);
+//            } catch (IOException ex) {
+//
+//                System.out.println(ex.getMessage());
+//            }
+
+            char[] output = mainHero.toHackBulls(enteredNumber, cardID);
 
             for (int i = 0; i < output.length; i++) {
                 System.out.print(output[i]);
@@ -98,7 +119,7 @@ public class GameController {
                     end &= false;
             }
 
-            if (end == true) break;
+            //if (end == true) break;
 
 
             //принты
@@ -167,12 +188,14 @@ public class GameController {
         this.enter = enter;
     }
 
-    public void settingTheInputID(){
+    public void settingTheInputID() {
         int i = 0;
-        while (i<4) {
-            if (input != 10)
+        while (i < 4) {
+            if (input != 10) ;
         }
     }
+
+//    public void
 
 
 }
