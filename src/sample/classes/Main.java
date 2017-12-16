@@ -8,6 +8,7 @@ import javafx.stage.Stage;
 
 public class Main extends Application {
     static Tiredness tiredness; //инициализация потока
+
     //Student student = new Student(1,1,1,100);
 
     @Override
@@ -27,6 +28,7 @@ public class Main extends Application {
     public static void main(String[] args) throws InterruptedException {
         tiredness = new Tiredness(); //создание потока
         tiredness.start(); //запуск потока
+
         launch(args);
         //Thread.sleep(20000);
         //Student student = new Student(1,1,1, 100);

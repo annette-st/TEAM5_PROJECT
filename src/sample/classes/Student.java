@@ -95,9 +95,16 @@ public class Student {
     }
 
 
-    public char[] toHackBulls(int inputID[], int cardID[]) {
+    public char[] toHackBulls(int enteredNumber, int[] cardID) {
         char[] output = new char[]{'*','*','*','*'};
+        int[] inputID = new int[4];
 
+        int digit = 0;
+        for (int i = inputID.length; i < 0; i--) {
+            digit = enteredNumber % 10;
+            enteredNumber /= 10;
+            inputID[i] = digit;
+        }
 //        for (int i = 0; i <output.length; i++) {
 //            output[i] = '*';
 //            System.out.print(output[i]); ///////////////////////////////////////////

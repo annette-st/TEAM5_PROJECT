@@ -1,24 +1,32 @@
 package sample.controllers;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
-import java.io.FileWriter;
+
+import java.awt.Font;
+import java.awt.event.*;
+import java.awt.FlowLayout;
+
+import java.io.*;
+import java.net.URL;
+import java.util.ResourceBundle;
+
 import sample.controllers.GameController;
 
-import java.io.IOException;
-
 public class AtmController {
-
     GameController gameController = new GameController();
+
 
     // label aer down here
     @FXML
-    private Label enteredText;
+    public TextField enteredText;
 
     //All navigation button are down here
     @FXML
@@ -32,21 +40,22 @@ public class AtmController {
     @FXML
     private Button cancelButton;
     @FXML
-    private Button enterButton;
+    public Button enterButton;
 
     @FXML
-    public void initialize(){
+    public void initialize() {
     }
 
     @FXML
     public void back() throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("../fxmlFiles/gameWindow.fxml"));
-        Stage stage = (Stage)backButton.getScene().getWindow();
+        Stage stage = (Stage) backButton.getScene().getWindow();
         stage.setTitle("The Game");
         stage.setScene(new Scene(root, 1000, 600));
         stage.setResizable(false);
         stage.show();
     }
+
     @FXML
     public void whatsHappenning() {
         try {
@@ -58,10 +67,11 @@ public class AtmController {
             stage.initModality(Modality.WINDOW_MODAL);
             stage.initOwner(questionButton.getScene().getWindow());
             stage.show();
-        } catch(IOException e) {
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
+
     public void exit() {
         try {
             Stage stage = new Stage();
@@ -72,7 +82,7 @@ public class AtmController {
             stage.initModality(Modality.WINDOW_MODAL);
             stage.initOwner(exitButton.getScene().getWindow());
             stage.show();
-        } catch(IOException e) {
+        } catch (IOException e) {
             e.printStackTrace();
         }
 //        gameController.exit();
@@ -80,36 +90,56 @@ public class AtmController {
 
     // All the insert buttons are down here
     @FXML
-    public void insertOne () {
-        gameController.setInput(1);
-//        enteredText.setText(()(gameController.mainHero.getInput()));
+    public void insertOne() {
+
+        gameController.mainHero.setInput(1);
+//        writeToFile(1);
+        enteredText.setText(String.valueOf(gameController.mainHero.getInput()));
     }
-    public void insertTwo () {
-        gameController.setInput(2);
+    public void insertTwo() {
+//        writeToFile(2);
+        gameController.mainHero.setInput(2);
+        enteredText.setText(String.valueOf(gameController.mainHero.getInput()));
     }
-    public void insertThree () {
-        gameController.setInput(3);
+    public void insertThree() {
+//        writeToFile(3);
+        gameController.mainHero.setInput(3);
+        enteredText.setText(String.valueOf(gameController.mainHero.getInput()));
     }
-    public void insertFour () {
-        gameController.setInput(4);
+    public void insertFour() {
+//        writeToFile(4);
+        gameController.mainHero.setInput(4);
+        enteredText.setText(String.valueOf(gameController.mainHero.getInput()));
     }
-    public void insertFive () {
-        gameController.setInput(5);
+    public void insertFive() {
+//        writeToFile(5);
+        gameController.mainHero.setInput(5);
+        enteredText.setText(String.valueOf(gameController.mainHero.getInput()));
     }
-    public void insertSix () {
-        gameController.setInput(6);
+    public void insertSix() {
+//        writeToFile(6);
+        gameController.mainHero.setInput(6);
+        enteredText.setText(String.valueOf(gameController.mainHero.getInput()));
     }
-    public void insertSeven () {
-        gameController.setInput(7);
+    public void insertSeven() {
+//        writeToFile(7);
+        gameController.mainHero.setInput(7);
+        enteredText.setText(String.valueOf(gameController.mainHero.getInput()));
     }
-    public void insertEight () {
-        gameController.setInput(8);
+    public void insertEight() {
+//        writeToFile(8);
+        gameController.mainHero.setInput(8);
+        enteredText.setText(String.valueOf(gameController.mainHero.getInput()));
     }
-    public void insertNine () {
-        gameController.setInput(9);
+    public void insertNine() {
+//        writeToFile(9);
+        gameController.mainHero.setInput(9);
+        enteredText.setText(String.valueOf(gameController.mainHero.getInput()));
     }
-    public void insertZero () {
-        gameController.setInput(0);
+    public void insertZero() {
+//        writeToFile(0);
+        gameController.mainHero.setInput(0);
+        enteredText.setText(String.valueOf(gameController.mainHero.getInput()));
     }
 
     public void cancelInput() {
@@ -117,17 +147,51 @@ public class AtmController {
     }
 
     public void enterInput() {
-        gameController.setEnter(true);
+
+        int enteredNumber = Integer.parseInt(enteredText.getText());
+        gameController.setEnteredNumber(enteredNumber);
+        System.out.println(".i.");
+        //gameController.setEnter(true);
+        //writeToFile("c");
     }
 
-    public void writeToFile() {
 
 //        FileWriter writer = new FileWriter("output.txt");
 //
 //
 //
 //         writer.close();
+    public void writeToFile(int c) {
+
+        try (FileWriter writer = new FileWriter("src/input.txt", true)) {
+            // запись всей строки
+            String text = "Мама мыла раму, раму мыла мама";
+            writer.write(String.valueOf(c));
+            // запись по символам
+            //writer.append('\n');
+            //writer.append('E');
+
+            writer.flush();
+        } catch (IOException ex) {
+
+            System.out.println(ex.getMessage());
+        }
     }
 
+    public void writeToFile(String c) {
 
+        try (FileWriter writer = new FileWriter("src/input.txt", true)) {
+            // запись всей строки
+            String text = "Мама мыла раму, раму мыла мама";
+            writer.write(c);
+            // запись по символам
+            //writer.append('\n');
+            //writer.append('E');
+
+            writer.flush();
+        } catch (IOException ex) {
+
+            System.out.println(ex.getMessage());
+        }
+    }
 }
