@@ -26,6 +26,9 @@ public class GameController {
 
     int input = 10;
 
+    int[] cardID = mainHero.toHackGeneration();
+    char[] output = mainHero.toHackBulls(enteredNumber, cardID);
+
     boolean enter = false;
     int count = 0;
     //Thread th = new
@@ -159,7 +162,7 @@ public class GameController {
     public void haveMeal() throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("../fxmlFiles/rastaurantsWindow.fxml"));
         Stage stage = (Stage)eatingButton.getScene().getWindow();
-        stage.setTitle("The Game");
+        stage.setTitle("Enjoy your meal!)");
         stage.setScene(new Scene(root,1000,600));
         stage.setResizable(false);
         stage.show();

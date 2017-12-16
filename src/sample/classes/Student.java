@@ -89,13 +89,17 @@ public class Student {
                 events(15, university, energy, medicine,40, 30, 400, 200);
                 break;
         }
-//        randomMinusMoney(20,5);
-//        energy = randomPlus(energy, 3, 1);
-//        satiety = randomPlus(satiety, 15, 10);
-//        university = randomMinus(university, 5, 5);
-//        events(15, university, energy, medicine,40, 30, 400, 200);
+
+
+
     }
 
+    public void toGetGift() {
+        randomPlusMoney(100, 150);
+        energy = randomMinus(energy, 21, 5);
+        satiety = randomMinus(satiety, 19, 8);
+        university = randomMinus(university, 20, 7);
+    }
 
     public char[] toHackBulls(int enteredNumber, int[] cardID) {
         char[] output = new char[]{'*','*','*','*'};
@@ -204,10 +208,10 @@ public class Student {
             else money -= fieldPoints;
     }
     //метод, выдающий рандомное кол-во денег для игрока
-    public int randomPlusMoney(int moneyPoints, int min, int max){
+    public int randomPlusMoney(int min, int max){
         Random rnd = new Random(System.currentTimeMillis());
-        moneyPoints = min + rnd.nextInt(max-min+1);
-        money -= moneyPoints;
+        int moneyPoints = min + rnd.nextInt(max-min+1);
+        money += moneyPoints;
         return moneyPoints;
     }
 
