@@ -23,10 +23,13 @@ import sample.controllers.GameController;
 public class AtmController {
     GameController gameController = new GameController();
 
-
     // label aer down here
     @FXML
     public TextField enteredText;
+    @FXML
+    public static Label generatedPinLabel;
+    @FXML
+    public static Label cowsLabel;
 
     //All navigation button are down here
     @FXML
@@ -148,9 +151,23 @@ public class AtmController {
 
     public void enterInput() {
 
-        int enteredNumber = Integer.parseInt(enteredText.getText());
-        gameController.setEnteredNumber(enteredNumber);
-        System.out.println(".i.");
+//        int enteredNumber = Integer.parseInt(enteredText.getText());
+//        gameController.setEnteredNumber(enteredNumber);
+        gameController.mainHero.toGetGift();
+        try {
+            Stage stage = new Stage();
+            Parent root = FXMLLoader.load(getClass().getResource("../fxmlFiles/DontHack.fxml"));
+            stage.setTitle("Don't do that");
+            stage.setScene(new Scene(root, 600, 400));
+            stage.setResizable(false);
+            stage.initModality(Modality.WINDOW_MODAL);
+            stage.initOwner(enterButton.getScene().getWindow());
+            stage.show();
+        } catch (IOException e) {
+//            e.printStackTrace();
+            System.out.println("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
+        }
+//        cycle.clear();
         //gameController.setEnter(true);
         //writeToFile("c");
     }

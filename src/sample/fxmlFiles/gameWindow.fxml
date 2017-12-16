@@ -22,11 +22,11 @@
                                 <Button fx:id="quitButton" mnemonicParsing="false" onAction="#exit" prefHeight="30.0" prefWidth="70.0" text="Quit" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="5.0" />
                             </children>
                         </AnchorPane>
-                  <AnchorPane>
-                     <children>
-                        <Button fx:id="questionButton" mnemonicParsing="false" onAction="#askQuestion" prefHeight="30.0" prefWidth="30.0" text="?" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="854.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="5.0" />
-                     </children>
-                  </AnchorPane>
+                        <AnchorPane>
+                            <children>
+                                <Button fx:id="questionButton" mnemonicParsing="false" onAction="#askQuestion" prefHeight="30.0" prefWidth="30.0" text="?" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="854.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="5.0" />
+                            </children>
+                        </AnchorPane>
                     </items>
                 </ToolBar>
             </children>
@@ -66,7 +66,7 @@
                 <Font size="15.0" />
             </font>
         </Label>
-        <Label fx:id="moneyLabel" alignment="CENTER" layoutX="800.0" layoutY="63.0" prefHeight="21.0" prefWidth="123.0" text="200">
+        <Label fx:id="moneyLabel" alignment="CENTER" layoutX="800.0" layoutY="55.0" prefHeight="21.0" prefWidth="123.0">
             <font>
                 <Font size="15.0" />
             </font>
