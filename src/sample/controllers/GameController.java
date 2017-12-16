@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.ProgressBar;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
@@ -14,8 +15,9 @@ import java.io.IOException;
 
 public class GameController {
 
-    Student mainHero = new Student(1,1,1,100);
-
+    public Student mainHero = new Student(1,1,1,150);
+    @FXML
+    public Label moneyLabel;
     @FXML
     private Button quitButton;
     @FXML
@@ -56,6 +58,8 @@ public class GameController {
         energyBar.setProgress(mainHero.getEnergy());
         foodBar.setProgress(mainHero.getSatiety());
         uniBar.setProgress(mainHero.getUniversity());
+        moneyLabel.setText(String.valueOf(mainHero.getMoney()));
+
         System.out.println("I've studied");
     }
     @FXML
@@ -64,6 +68,7 @@ public class GameController {
         energyBar.setProgress(mainHero.getEnergy());
         foodBar.setProgress(mainHero.getSatiety());
         uniBar.setProgress(mainHero.getUniversity());
+        moneyLabel.setText(String.valueOf(mainHero.getMoney()));
         System.out.println("I've slept well");
     }
     @FXML
@@ -72,6 +77,7 @@ public class GameController {
         energyBar.setProgress(mainHero.getEnergy());
         foodBar.setProgress(mainHero.getSatiety());
         uniBar.setProgress(mainHero.getUniversity());
+        moneyLabel.setText(String.valueOf(mainHero.getMoney()));
         System.out.println("I've eaten");
     }
     @FXML

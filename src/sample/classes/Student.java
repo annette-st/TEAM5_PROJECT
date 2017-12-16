@@ -39,42 +39,46 @@ public class Student {
     public void toEat() {
         int restaurant = 0;
         int medicine = 0;
-        switch (restaurant) {
-            case 1: //добрая
-                randomMinusMoney(200, 100);
-                energy = randomPlus(energy,5,2);
-                satiety = randomPlus(satiety,30, 15);
-                events(15, university, energy, medicine,40, 30, 400, 200);
-                break;
-            case 2: //ханума
-                randomMinusMoney(250,100);
-                energy = randomPlus(energy, 7, 4);
-                satiety = randomPlus(satiety, 40, 20);
-                events(15, university, energy, medicine,40, 30, 400, 200);
-                break;
-            case 3: //дошик
-                randomMinusMoney(50, 20);
-                energy = randomPlus(energy,3,1);
-                satiety = randomPlus(satiety,15, 5);
-                events(15, university, energy, medicine,40, 30, 400, 200);
-                break;
-            case 4: //макдональдс
-                randomMinusMoney(600, 350);
-                energy = randomPlus(energy,10,5);
-                satiety = randomPlus(satiety,50, 35);
-                events(15, university, energy, medicine,40, 30, 400, 200);
-                break;
-            case 5: //мастер пицца
-                randomMinusMoney(140, 100);
-                energy = randomPlus(energy,5,2);
-                satiety = randomPlus(satiety,30, 20);
-                events(15, university, energy, medicine,40, 30, 400, 200);
-                break;
-        }
+//        switch (restaurant) {
+//            case 1: //добрая
+//                randomMinusMoney(200, 100);
+//                energy = randomPlus(energy,5,2);
+//                satiety = randomPlus(satiety,30, 15);
+//                events(15, university, energy, medicine,40, 30, 400, 200);
+//                break;
+//            case 2: //ханума
+//                randomMinusMoney(250,100);
+//                energy = randomPlus(energy, 7, 4);
+//                satiety = randomPlus(satiety, 40, 20);
+//                events(15, university, energy, medicine,40, 30, 400, 200);
+//                break;
+//            case 3: //дошик
+//                randomMinusMoney(50, 20);
+//                energy = randomPlus(energy,3,1);
+//                satiety = randomPlus(satiety,15, 5);
+//                events(15, university, energy, medicine,40, 30, 400, 200);
+//                break;
+//            case 4: //макдональдс
+//                randomMinusMoney(600, 350);
+//                energy = randomPlus(energy,10,5);
+//                satiety = randomPlus(satiety,50, 35);
+//                events(15, university, energy, medicine,40, 30, 400, 200);
+//                break;
+//            case 5: //мастер пицца
+//                randomMinusMoney(140, 100);
+//                energy = randomPlus(energy,5,2);
+//                satiety = randomPlus(satiety,30, 20);
+//                events(15, university, energy, medicine,40, 30, 400, 200);
+//                break;
+//        }
+        randomMinusMoney(250,100);
+        energy = randomPlus(energy, 7, 4);
+        satiety = randomPlus(satiety, 40, 20);
+        events(15, university, energy, medicine,40, 30, 400, 200);
     }
 
 
-    public void toHack() {
+    public void toHack(int inputID[]) {
 
         Random rnd = new Random(System.currentTimeMillis());
         final int ATTEMPTS = 4; //кол-во попыток
@@ -110,7 +114,6 @@ public class Student {
             System.out.println("Введите щисло");
             //input =
             // вводимое число
-            int inputID[] = new int[4];
 
             // формирование числа в массив цифр
             for (int i = 0; i < inputID.length; i++) {
@@ -160,6 +163,9 @@ public class Student {
                     System.out.print(i + " ");
             }
             System.out.println(" ");
+            for(int i = 0; i < inputID.length; i++) {
+                System.out.println(inputID[i]);
+            }
         }
 
         if (end == true) {// действие при конце игры с положительным исходом

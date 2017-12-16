@@ -15,6 +15,8 @@ import java.io.IOException;
 public class AtmController {
 
     GameController gameController = new GameController();
+    int array[] = new int[4];
+    int count = 0;
     // label aer down here
     @FXML
     private Label enteredText;
@@ -80,21 +82,25 @@ public class AtmController {
     // All the insert buttons are down here
     @FXML
     public void insertOne () {
-        gameController.mainHero.setInput(1);
-<<<<<<< HEAD
+        if(count < array.length) {
+            array[count++] = 1;
+        }
 //        enteredText.setText(()(gameController.mainHero.getInput()));
-=======
-        //enteredText.setText(gameController.mainHero.getInput());
->>>>>>> d4747fc7acb689aefd9f0227c90c1c7127941b73
     }
     public void insertTwo () {
-        gameController.mainHero.setInput(2);
+        if(count < array.length) {
+            array[count++] = 2;
+        }
     }
     public void insertThree () {
-        gameController.mainHero.setInput(3);
+        if(count < array.length) {
+            array[count++] = 3;
+        }
     }
     public void insertFour () {
-        gameController.mainHero.setInput(4);
+        if(count < array.length) {
+            array[count++] = 4;
+        }
     }
     public void insertFive () {
         gameController.mainHero.setInput(5);
@@ -118,7 +124,7 @@ public class AtmController {
         System.out.println("I've canceled");
     }
     public void enterInput() {
-        System.out.println("I've entered");
+        gameController.mainHero.toHack(array);
     }
 
 }

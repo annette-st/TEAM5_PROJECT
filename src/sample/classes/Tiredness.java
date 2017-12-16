@@ -1,9 +1,10 @@
 package sample.classes;
 
 import com.sun.org.apache.xpath.internal.SourceTree;
+import sample.controllers.GameController;
 
 public class Tiredness extends Thread{
-        @Override
+    @Override
         public void run() {
             //этот метод означает, что через определенное кол-во времени человек будет уставать и голодать
             //метод выполняется в background режиме
@@ -22,6 +23,6 @@ public class Tiredness extends Thread{
             }
             //также если у нас будет реализация времени, то можно реализовать ее здесь
         }
-    }
+}
 
 
