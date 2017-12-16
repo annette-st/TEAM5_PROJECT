@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="300.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.questionModel">
+    <children>
+        <Label alignment="BOTTOM_CENTER" layoutX="88.0" layoutY="14.0" prefHeight="50.0" prefWidth="324.0" text="Look after the boy.">
+            <font>
+                <Font size="19.0" />
+            </font>
+        </Label>
+        <Button fx:id="okayButton" layoutX="210.0" layoutY="181.0" mnemonicParsing="false" onAction="#doNothing" prefHeight="50.0" prefWidth="80.0" text="Okay">
+         <font>
+            <Font size="15.0" />
+         </font></Button>
+      <Label alignment="TOP_CENTER" layoutX="88.0" layoutY="64.0" prefHeight="29.0" prefWidth="324.0" text="Feed him, make sleep and go to uni.">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label alignment="TOP_CENTER" layoutX="88.0" layoutY="93.0" prefHeight="29.0" prefWidth="324.0" text="Earn money via hacking debit cards.">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>
