@@ -16,7 +16,7 @@
    <children>
       <AnchorPane VBox.vgrow="ALWAYS">
          <children>
-            <Label alignment="CENTER" prefWidth="400.0" text="Name of the game" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="350.0" AnchorPane.rightAnchor="350.0" AnchorPane.topAnchor="15.0">
+            <Label alignment="CENTER" prefWidth="400.0" text="StudHack" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="350.0" AnchorPane.rightAnchor="350.0" AnchorPane.topAnchor="15.0">
                <font>
                   <Font size="27.0" />
                </font>
