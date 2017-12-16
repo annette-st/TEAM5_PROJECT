@@ -22,17 +22,17 @@ public class Student {
         this.money = money;
     }
     public void toSleep() {
-        energy = randomPlus(energy,70,60);
-        satiety = randomMinus(satiety,50, 30);
-        university = randomMinus(university, 20, 10);
+        energy = randomPlus(energy,15,10);
+        satiety = randomMinus(satiety,10, 5);
+        university = randomMinus(university, 5, 5);
         events(15, energy, university, 50, 30);
     }
 
     public void toStudy() {
-        university = randomPlus(university, 35, 20);
+        university = randomPlus(university, 15, 10);
         minusMoney(25);
-        energy = randomMinus(energy, 40, 20);
-        satiety = randomMinus(satiety,40,20);
+        energy = randomMinus(energy, 10, 5);
+        satiety = randomMinus(satiety,15,10);
         events(15, energy, university, 25, 15);
     }
 
@@ -71,9 +71,10 @@ public class Student {
 //                events(15, university, energy, medicine,40, 30, 400, 200);
 //                break;
 //        }
-        randomMinusMoney(250,100);
-        energy = randomPlus(energy, 7, 4);
-        satiety = randomPlus(satiety, 40, 20);
+        randomMinusMoney(20,5);
+        energy = randomPlus(energy, 3, 1);
+        satiety = randomPlus(satiety, 15, 10);
+        university = randomMinus(university, 5, 5);
         events(15, university, energy, medicine,40, 30, 400, 200);
     }
 
