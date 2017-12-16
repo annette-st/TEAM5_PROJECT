@@ -45,46 +45,53 @@ public class Student {
 
     }
 
+    int restaurant = 0;
+
     public void toEat() {
-        int restaurant = 0;
         int medicine = 0;
-//        switch (restaurant) {
-//            case 1: //добрая
-//                randomMinusMoney(200, 100);
-//                energy = randomPlus(energy,5,2);
-//                satiety = randomPlus(satiety,30, 15);
-//                events(15, university, energy, medicine,40, 30, 400, 200);
-//                break;
-//            case 2: //ханума
-//                randomMinusMoney(250,100);
-//                energy = randomPlus(energy, 7, 4);
-//                satiety = randomPlus(satiety, 40, 20);
-//                events(15, university, energy, medicine,40, 30, 400, 200);
-//                break;
-//            case 3: //дошик
-//                randomMinusMoney(50, 20);
-//                energy = randomPlus(energy,3,1);
-//                satiety = randomPlus(satiety,15, 5);
-//                events(15, university, energy, medicine,40, 30, 400, 200);
-//                break;
-//            case 4: //макдональдс
-//                randomMinusMoney(600, 350);
-//                energy = randomPlus(energy,10,5);
-//                satiety = randomPlus(satiety,50, 35);
-//                events(15, university, energy, medicine,40, 30, 400, 200);
-//                break;
-//            case 5: //мастер пицца
-//                randomMinusMoney(140, 100);
-//                energy = randomPlus(energy,5,2);
-//                satiety = randomPlus(satiety,30, 20);
-//                events(15, university, energy, medicine,40, 30, 400, 200);
-//                break;
-//        }
-        randomMinusMoney(20,5);
-        energy = randomPlus(energy, 3, 1);
-        satiety = randomPlus(satiety, 15, 10);
-        university = randomMinus(university, 5, 5);
-        events(15, university, energy, medicine,40, 30, 400, 200);
+        switch (restaurant) {
+            case 1: //добрая
+                randomMinusMoney(12, 7);
+                energy = randomPlus(energy,1,1);
+                satiety = randomPlus(satiety,12, 9);
+                events(15, university, energy, medicine,40, 30, 400, 200);
+                break;
+            case 2: //ханума
+                randomMinusMoney(16,9);
+                energy = randomPlus(energy, 3, 2);
+                satiety = randomPlus(satiety, 17, 10);
+                events(15, university, energy, medicine,40, 30, 400, 200);
+                break;
+            case 3: //дошик
+                randomMinusMoney(10, 5);
+                energy = randomPlus(energy,3,1);
+                satiety = randomPlus(satiety,12, 5);
+                events(15, university, energy, medicine,40, 30, 400, 200);
+                break;
+            case 4: //макдональдс
+                randomMinusMoney(15, 12);
+                energy = randomPlus(energy,3,1);
+                satiety = randomPlus(satiety,15, 10);
+                events(15, university, energy, medicine,40, 30, 400, 200);
+                break;
+            case 5: //мастер пицца
+                randomMinusMoney(10, 5);
+                energy = randomPlus(energy,1,1);
+                satiety = randomPlus(satiety,10, 5);
+                events(15, university, energy, medicine,40, 30, 400, 200);
+                break;
+            case 6: //air
+                randomMinusMoney(5, 0);
+                energy = randomPlus(energy,0,0);
+                satiety = randomPlus(satiety,5, 1);
+                events(15, university, energy, medicine,40, 30, 400, 200);
+                break;
+        }
+//        randomMinusMoney(20,5);
+//        energy = randomPlus(energy, 3, 1);
+//        satiety = randomPlus(satiety, 15, 10);
+//        university = randomMinus(university, 5, 5);
+//        events(15, university, energy, medicine,40, 30, 400, 200);
     }
 
 
@@ -225,6 +232,9 @@ public class Student {
     }
     public void setInput(int input) {
         this.input = input;
+    }
+    public void setRestaurant(int restaurant) {
+        this.restaurant = restaurant;
     }
 
     public static double getSatiety() {

@@ -51,7 +51,7 @@ public class AtmController {
     public void whatsHappenning() {
         try {
             Stage stage = new Stage();
-            Parent root = FXMLLoader.load(getClass().getResource("../fxmlFiles/modalAtm.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("../fxmlFiles/atmQuestion.fxml"));
             stage.setTitle("Read and try to understand");
             stage.setScene(new Scene(root, 600, 400));
             stage.setResizable(false);
@@ -122,11 +122,11 @@ public class AtmController {
 
     public void writeToFile() {
 
-        FileWriter writer = new FileWriter("output.txt");
-
-
-
-         writer.close();
+//        FileWriter writer = new FileWriter("output.txt");
+//
+//
+//
+//         writer.close();
     }
 
 

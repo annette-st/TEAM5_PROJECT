@@ -8,23 +8,15 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="600.0" minWidth="1000.0" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.RulesController">
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.RulesController">
    <children>
-      <AnchorPane>
-         <children>
-            <Label alignment="CENTER" prefHeight="40.0" prefWidth="1000.0" text="Developers" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="15.0">
-               <font>
-                  <Font size="27.0" />
-               </font>
-            </Label>
-         </children>
-      </AnchorPane>
-      <AnchorPane>
-         <children>
-            <Label alignment="CENTER" prefHeight="395.0" text="info about developers should be here" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="15.0" />
-         </children>
-      </AnchorPane>
-      <ToolBar prefHeight="50.0" prefWidth="1000.0">
+      <Label alignment="CENTER" layoutX="366.0" layoutY="30.0" prefHeight="50.0" prefWidth="270.0" text="Who made thats all?">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <ToolBar layoutY="550.0" prefHeight="50.0" prefWidth="1000.0">
         <items>
             <AnchorPane>
                <children>
@@ -33,10 +25,60 @@
             </AnchorPane>
             <AnchorPane>
                <children>
-                  <Button disable="true" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="?" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="854.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="5.0" />
+                  <Button disable="true" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="?" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="854.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="5.0" />
                </children>
             </AnchorPane>
         </items>
       </ToolBar>
+      <Label alignment="CENTER" layoutX="175.0" layoutY="122.0" prefHeight="25.0" prefWidth="150.0" text="Management">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="681.0" layoutY="122.0" prefHeight="25.0" prefWidth="150.0" text="Ann Tugbaeva">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="175.0" layoutY="162.0" prefHeight="25.0" prefWidth="150.0" text="TeamLid">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="681.0" layoutY="162.0" prefHeight="25.0" prefWidth="150.0" text="Max 'Deem' Pozdeev">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="175.0" layoutY="199.0" prefHeight="25.0" prefWidth="150.0" text="The Best Dev Ever">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="656.0" layoutY="199.0" prefHeight="25.0" prefWidth="200.0" text="Razil 'Saiple' Minneahmetov">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="175.0" layoutY="288.0" prefHeight="25.0" prefWidth="150.0" text="Special Thanks To">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="681.0" layoutY="288.0" prefHeight="25.0" prefWidth="150.0" text="Levan 'C#' Jangidze">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="150.0" layoutY="380.0" prefHeight="25.0" prefWidth="200.0" text="Great teacher-consultant">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="656.0" layoutY="380.0" prefHeight="25.0" prefWidth="200.0" text="Marsel 'TheBest' Sidikov">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
    </children>
-</VBox>
+</Pane>

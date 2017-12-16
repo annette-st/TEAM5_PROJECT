@@ -50,6 +50,7 @@ public class GameController {
         energyBar.setProgress(mainHero.getEnergy());
         foodBar.setProgress(mainHero.getSatiety());
         uniBar.setProgress(mainHero.getUniversity());
+        moneyLabel.setText(String.valueOf(mainHero.getMoney()));
     }
 
     @FXML
@@ -134,12 +135,12 @@ public class GameController {
 
     @FXML
     public void haveMeal() throws IOException {
-        mainHero.toEat();
-        energyBar.setProgress(mainHero.getEnergy());
-        foodBar.setProgress(mainHero.getSatiety());
-        uniBar.setProgress(mainHero.getUniversity());
-        moneyLabel.setText(String.valueOf(mainHero.getMoney()));
-        System.out.println("I've eaten");
+        Parent root = FXMLLoader.load(getClass().getResource("../fxmlFiles/rastaurantsWindow.fxml"));
+        Stage stage = (Stage)eatingButton.getScene().getWindow();
+        stage.setTitle("The Game");
+        stage.setScene(new Scene(root,1000,600));
+        stage.setResizable(false);
+        stage.show();
     }
 
     @FXML
@@ -147,6 +148,22 @@ public class GameController {
         try {
             Stage stage = new Stage();
             Parent root = FXMLLoader.load(getClass().getResource("../fxmlFiles/youWannaExit.fxml"));
+            stage.setTitle("Really?");
+            stage.setScene(new Scene(root, 500, 300));
+            stage.setResizable(false);
+            stage.initModality(Modality.WINDOW_MODAL);
+            stage.initOwner(quitButton.getScene().getWindow());
+            stage.show();
+        } catch (IOException e) {
+//            e.printStackTrace();
+            System.out.println("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
+        }
+    }
+    @FXML
+    public void askQuestion() {
+        try {
+            Stage stage = new Stage();
+            Parent root = FXMLLoader.load(getClass().getResource("../fxmlFiles/gameQuestion.fxml"));
             stage.setTitle("Really?");
             stage.setScene(new Scene(root, 500, 300));
             stage.setResizable(false);
@@ -168,10 +185,10 @@ public class GameController {
     }
 
     public void settingTheInputID(){
-        int i = 0;
-        while (i<4) {
-            if (input != 10)
-        }
+//        int i = 0;
+//        while (i<4) {
+//            if (input != 10)
+//        }
     }
 
 
