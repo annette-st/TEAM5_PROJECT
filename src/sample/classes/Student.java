@@ -8,6 +8,8 @@ import java.util.Scanner;
 
 public class Student {
     Scanner scanner = new Scanner(System.in);
+    Tiredness1 tiredness1 = new Tiredness1();
+    Tiredness2 tiredness2 = new Tiredness2();
 
     static double satiety; //сытость
     static double energy; //энергия
@@ -178,8 +180,13 @@ public class Student {
         double fieldPoints = (min + rnd.nextInt(max-min+1)) * 0.01;
         if (field - fieldPoints < MINIMUM_LEVEL) field = MINIMUM_LEVEL;
         else field -= fieldPoints;
+        if (field == 0) {
+            tiredness1.start();
+            tiredness2.start();
+        }
         return field;
     }
+
 
     //метод, который вычитает определенное количесвто единиц(value) от показателя(field) для денег
     public void minusMoney(int value) {

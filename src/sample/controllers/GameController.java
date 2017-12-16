@@ -37,13 +37,13 @@ public class GameController {
     @FXML
     private Button quitButton;
     @FXML
-    private Button uniButton;
+    public Button uniButton;
     @FXML
-    private Button sleepButton;
+    public Button sleepButton;
     @FXML
-    private Button hackButton;
+    public Button hackButton;
     @FXML
-    private Button eatingButton;
+    public Button eatingButton;
 
     @FXML
     ProgressBar energyBar;
@@ -58,6 +58,7 @@ public class GameController {
         foodBar.setProgress(mainHero.getSatiety());
         uniBar.setProgress(mainHero.getUniversity());
         moneyLabel.setText(String.valueOf(mainHero.getMoney()));
+
     }
 
     @FXML

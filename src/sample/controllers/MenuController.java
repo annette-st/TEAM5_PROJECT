@@ -12,10 +12,17 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class MenuController {
+
     @FXML
     private Button rulesButton;
     @FXML
     private Button startButton;
+
+    public boolean isStart() {
+        return start;
+    }
+
+    boolean start = false;
 
     @FXML
     public void initialize() {
@@ -28,6 +35,8 @@ public class MenuController {
         stage.setScene(new Scene(root, 1000, 600));
         stage.setResizable(false);
         stage.show();
+        start = true;
+
     }
 
     public void showCredits() throws IOException {

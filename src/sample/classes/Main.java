@@ -7,7 +7,9 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class Main extends Application {
-    static Tiredness tiredness; //инициализация потока
+
+    static Tiredness tiredness;
+    //static Tiredness1 tiredness1; //инициализация потока
 
     //Student student = new Student(1,1,1,100);
 
@@ -27,13 +29,16 @@ public class Main extends Application {
 
     public static void main(String[] args) throws InterruptedException {
         tiredness = new Tiredness(); //создание потока
+        //tiredness1 = new Tiredness1(); //создание потока
         tiredness.start(); //запуск потока
-
+       // tiredness1.start();
         launch(args);
+        //System.out.println("xui");
         //Thread.sleep(20000);
         //Student student = new Student(1,1,1, 100);
         //student.toHack();
         tiredness.stop();
+        //tiredness1.stop();
        // for (int x: student.toHackGeneration()) {
          //   System.out.println(x);
         }
