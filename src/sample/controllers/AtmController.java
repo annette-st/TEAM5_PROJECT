@@ -57,6 +57,7 @@ public class AtmController {
             stage.setTitle("Read and try to understand");
             stage.setScene(new Scene(root, 600, 400));
             stage.setResizable(false);
+            stage.setAlwaysOnTop(true);
             stage.initModality(Modality.WINDOW_MODAL);
             stage.initOwner(questionButton.getScene().getWindow());
             stage.show();

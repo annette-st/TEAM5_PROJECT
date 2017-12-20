@@ -15,7 +15,13 @@ public class ModalAtmController {
     private Button okayButton;
 
     @FXML
-    public void sayOkay() throws IOException {
+    public void initialze() {
+        Stage stage = new Stage();
+        stage.close();
+    }
 
+    @FXML
+    public void sayOkay() throws IOException {
+        initialze();
     }
 }
