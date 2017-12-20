@@ -1,5 +1,7 @@
 package sample.classes;
 
+import com.sun.org.apache.xpath.internal.SourceTree;
+
 public class Tiredness extends Thread{
         @Override
         public void run() {
@@ -7,11 +9,19 @@ public class Tiredness extends Thread{
             //метод выполняется в background режиме
             while (true) {
                 try {
+<<<<<<< HEAD
                     sleep(30000);		//Приостанавливает поток на 30 секунд
+=======
+                    sleep(1000);		//Приостанавливает поток на 20 секунд
+>>>>>>> f931e1fdd469d89017bcface60f9f5fcf04d2bb1
                 } catch (InterruptedException e) {}
 
                 Student.setSatiety(5);
                 Student.setEnergy(4);
+
+                System.out.println(Student.getEnergy());
+                System.out.println(Student.getSatiety());
+                System.out.println(Student.getUniversity());
             }
             //также если у нас будет реализация времени, то можно реализовать ее здесь
         }

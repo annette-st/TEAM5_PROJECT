@@ -22,7 +22,7 @@ public class GameController {
     private Button hackButton;
     @FXML
     private Button eatingButton;
-    Student mainHero = new Student(70,70,70,70);
+    Student mainHero = new Student(1,1,1,100);
 
     @FXML
     ProgressBar energyBar;

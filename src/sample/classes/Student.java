@@ -7,12 +7,12 @@ import java.util.Scanner;
 public class Student {
     Scanner scanner = new Scanner(System.in);
 
-    static int satiety; //сытость
-    static int energy; //энергия
-    int university; // успеваемость и рейтинг в универе
+    static double satiety; //сытость
+    static double energy; //энергия
+    static double university; // успеваемость и рейтинг в универе
     int money; // деньги
 
-    public Student(int satiety, int energy, int university, int money) {
+    public Student(double satiety, double energy, double university, int money) {
         this.satiety = satiety;
         this.energy = energy;
         this.university = university;
@@ -186,30 +186,30 @@ public class Student {
         }
     }
 
-    public static void setSatiety(int satietyPoints) {
-        satiety -= satietyPoints;
-        System.out.println(satiety);
+    public static void setSatiety(double satietyPoints) {
+        satiety -= satietyPoints * 0.01;
+        //System.out.println(satiety);
     }
 
-    public static void setEnergy(int energyPoints) {
-        energy -= energyPoints;
-        System.out.println(energy);
+    public static void setEnergy(double energyPoints) {
+        energy -= energyPoints * 0.01;
+        //System.out.println(energy);
     }
 
     //метод, который добавляет рандомное количесвто единиц к показателю(field) в переделах от min до max
-    public void randomPlus(int field, int max, int min) {
-        final int MAXIMUM_LEVEL = 100;
+    public void randomPlus(double field, int max, int min) {
+        final double MAXIMUM_LEVEL = 1;
         Random rnd = new Random(System.currentTimeMillis());
-        int fieldPoints = min + rnd.nextInt(max-min+1);
+        double fieldPoints = (min + rnd.nextInt(max-min+1))*0.01;
         if (fieldPoints + field > MAXIMUM_LEVEL) field = MAXIMUM_LEVEL;
             else field += fieldPoints;
     }
 
     //метод, который вычитает рандомное количесвто единиц у показателя(field) в переделах от min до max
-    public void randomMinus(int field, int max, int min) {
-        final int MINIMUM_LEVEL = 0;
+    public void randomMinus(double field, int max, int min) {
+        final double MINIMUM_LEVEL = 0;
         Random rnd = new Random(System.currentTimeMillis());
-        int fieldPoints = min + rnd.nextInt(max-min+1);
+        double fieldPoints = (min + rnd.nextInt(max-min+1)) * 0.01;
         if (field - fieldPoints < MINIMUM_LEVEL) field = MINIMUM_LEVEL;
         else field -= fieldPoints;
     }
@@ -236,7 +236,7 @@ public class Student {
     }
 
     //методы ивентов
-    public void events(int percent, int field1, int field2, int max, int min) {
+    public void events(int percent, double field1, double field2, int max, int min) {
         Random rnd = new Random(System.currentTimeMillis());
         int generatedPercent = rnd.nextInt(101);
         if (generatedPercent <= percent) {
@@ -246,7 +246,7 @@ public class Student {
     }
 
     //метод ивентов с деньгами
-    public void events(int percent, int field1, int field2, int money, int max, int min, int maxMoney, int minMoney) {
+    public void events(int percent, double field1, double field2, int money, int max, int min, int maxMoney, int minMoney) {
         Random rnd = new Random(System.currentTimeMillis());
         int generatedPercent = rnd.nextInt(101);
         if (generatedPercent <= percent) {
@@ -258,7 +258,7 @@ public class Student {
         }
     }
     //метод ивентов с деньгами с фиксированным значением
-    public void eventsMoneyMinus(int percent, int field1, int field2, int money, int max, int min) {
+    public void eventsMoneyMinus(int percent, double field1, double field2, int money, int max, int min) {
         Random rnd = new Random(System.currentTimeMillis());
         int generatedPercent = rnd.nextInt(101);
         if (generatedPercent <= percent){
@@ -269,13 +269,13 @@ public class Student {
         }
     }
 
-    public static int getSatiety() {
+    public static double getSatiety() {
         return satiety;
     }
-    public static int getEnergy() {
+    public static double getEnergy() {
         return energy;
     }
-    public int getUniversity() {
+    public static double getUniversity() {
         return university;
     }
     public int getMoney() {

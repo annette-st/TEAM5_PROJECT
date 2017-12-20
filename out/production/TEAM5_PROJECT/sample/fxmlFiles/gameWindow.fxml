@@ -12,7 +12,7 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.GameController">
    <children>
-      <ProgressBar fx:id="foodBar" layoutX="50.0" layoutY="16.0" prefHeight="18.0" prefWidth="300.0" progress="0.39" />
+      <ProgressBar fx:id="foodBar" layoutX="50.0" layoutY="16.0" prefHeight="18.0" prefWidth="300.0" progress="1.0" />
       <AnchorPane layoutY="550.0">
          <children>
             <ToolBar prefHeight="50.0" prefWidth="1000.0">
@@ -28,16 +28,16 @@
       </AnchorPane>
       <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../icons/icons8-Столовые приборы-48.png" />
+            <Image url="@../../icons/icons8-Столовые%20приборы-48.png" />
          </image>
          <viewport>
             <Rectangle2D />
          </viewport>
       </ImageView>
-      <ProgressBar fx:id="energyBar" layoutX="50.0" layoutY="55.0" prefWidth="300.0" progress="0.39" />
+      <ProgressBar fx:id="energyBar" layoutX="50.0" layoutY="55.0" prefWidth="300.0" progress="1.0" />
       <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="10.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../icons/icons8-Удар молнии-48.png" />
+            <Image url="@../../icons/icons8-Удар%20молнии-48.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="10.0" layoutY="90.0" pickOnBounds="true" preserveRatio="true">
@@ -45,13 +45,12 @@
             <Image url="@../../icons/icons8-Отдел-48.png" />
          </image>
       </ImageView>
-      <ProgressBar layoutX="50.0" layoutY="96.0" prefWidth="300.0" progress="0.39" />
+      <ProgressBar fx:id="uniBar" layoutX="50.0" layoutY="96.0" prefWidth="300.0" progress="1.0" />
       <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="10.0" layoutY="130.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../icons/icons8-Рубль-48.png" />
          </image>
       </ImageView>
-      <ProgressBar layoutX="50.0" layoutY="136.0" prefWidth="300.0" progress="0.39" />
       <Label layoutX="370.0" layoutY="15.0" prefHeight="140.0" prefWidth="620.0" text="person's status will be here">
          <padding>
             <Insets left="12.0" />
@@ -62,5 +61,20 @@
       <Button fx:id="hackButton" layoutX="75.0" layoutY="440.0" mnemonicParsing="false" onAction="#hack" prefHeight="40.0" prefWidth="250.0" text="Hack" />
       <Group />
       <Button fx:id="eatingButton" layoutX="75.0" layoutY="360.0" mnemonicParsing="false" onAction="#haveMeal" prefHeight="40.0" prefWidth="250.0" text="Have a meal" />
+      <Label layoutX="50.0" layoutY="135.0" prefHeight="20.0" prefWidth="75.0" text="Money">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="172.0" layoutY="135.0" prefHeight="20.0" prefWidth="75.0" text="amountOfMoney">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="342.0" fitWidth="366.0" layoutX="498.0" layoutY="160.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../icons/photo_2017-12-10_15-15-13.jpg" />
+         </image>
+      </ImageView>
    </children>
 </Pane>
