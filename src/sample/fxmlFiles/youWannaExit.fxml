@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="300.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.modalCheck">
+   <children>
+      <Label alignment="CENTER" layoutX="150.0" layoutY="50.0" prefHeight="70.0" prefWidth="200.0" text="Are you shure?">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Button fx:id="yesButton" layoutX="110.0" layoutY="181.0" mnemonicParsing="false" onAction="#endTheGame" prefHeight="50.0" prefWidth="80.0" text="YES" />
+      <Button fx:id="noButton" layoutX="310.0" layoutY="181.0" mnemonicParsing="false" onAction="#doNothing" prefHeight="50.0" prefWidth="80.0" text="NO" />
+   </children>
+</AnchorPane>

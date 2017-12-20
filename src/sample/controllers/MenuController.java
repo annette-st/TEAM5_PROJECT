@@ -30,7 +30,7 @@ public class MenuController {
         stage.show();
     }
 
-    public void showCredits(ActionEvent actionEvent) throws IOException {
+    public void showCredits() throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("../fxmlFiles/creditsWindow.fxml"));
         Stage stage = (Stage)rulesButton.getScene().getWindow();
         stage.setTitle("Developers");
@@ -39,7 +39,7 @@ public class MenuController {
         stage.show();
     }
 
-    public void showRules(ActionEvent actionEvent) throws IOException {
+    public void showRules() throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("../fxmlFiles/rulesWindow.fxml"));
         Stage stage = (Stage)rulesButton.getScene().getWindow();
         stage.setTitle("Game Rules");
@@ -48,7 +48,7 @@ public class MenuController {
         stage.show();
     }
 
-    public void quit(ActionEvent actionEvent) {
+    public void quit() {
         System.exit(1);
     }
 

@@ -10,19 +10,19 @@ import javafx.stage.Window;
 
 import java.io.IOException;
 
-public class ModalAtmController {
+import java.io.IOException;
+
+public class modalCheck {
     @FXML
-    private Button okayButton;
+    private Button noButton;
 
     @FXML
-    public void initialze() throws IOException {
-//        Stage stage = new Stage();
-//        stage.close();
-    }
-
-    @FXML
-    public void sayOkay() throws IOException {
-        Stage stage = (Stage) okayButton.getScene().getWindow();
+    public void doNothing() throws IOException {
+        Stage stage = (Stage) noButton.getScene().getWindow();
         stage.close();
+    }
+    @FXML
+    public void endTheGame() {
+        System.exit(1);
     }
 }

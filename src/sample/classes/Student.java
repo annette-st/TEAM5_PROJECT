@@ -1,5 +1,7 @@
 package sample.classes;
 
+import sample.controllers.AtmController;
+
 import java.util.Random;
 import java.util.Scanner;
 
@@ -11,6 +13,7 @@ public class Student {
     static double energy; //энергия
     static double university; // успеваемость и рейтинг в универе
     int money; // деньги
+    int input; // number entered in ATM when hacking
 
     public Student(double satiety, double energy, double university, int money) {
         this.satiety = satiety;
@@ -70,6 +73,7 @@ public class Student {
         }
     }
 
+
     public void toHack() {
 
         Random rnd = new Random(System.currentTimeMillis());
@@ -104,14 +108,18 @@ public class Student {
 
             //ввод 4-значного числа
             System.out.println("Введите щисло");
-            int input = scanner.nextInt();                      // вводимое число
+            //input =
+            // вводимое число
             int inputID[] = new int[4];
 
             // формирование числа в массив цифр
             for (int i = 0; i < inputID.length; i++) {
-                inputID[inputID.length - i -1] = input % 10;
-                input /= 10;
+                inputID[inputID.length - i -1] = input;
             }
+//            for (int i = 0; i < inputID.length; i++) {
+//                inputID[inputID.length - i -1] = input % 10;
+//                input /= 10;
+//            }
             //нахождение коров
             //цифры - коровы
             boolean cowdigit[] = new boolean[10];
@@ -268,6 +276,9 @@ public class Student {
             System.out.println("затрачено" + money);
         }
     }
+    public void setInput(int input) {
+        this.input = input;
+    }
 
     public static double getSatiety() {
         return satiety;
@@ -280,5 +291,8 @@ public class Student {
     }
     public int getMoney() {
         return money;
+    }
+    public int getInput() {
+        return input;
     }
 }

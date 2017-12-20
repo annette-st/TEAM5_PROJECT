@@ -6,12 +6,16 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ProgressBar;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 import sample.classes.Student;
 
 import java.io.IOException;
 
 public class GameController {
+
+    Student mainHero = new Student(1,1,1,100);
+
     @FXML
     private Button quitButton;
     @FXML
@@ -22,7 +26,6 @@ public class GameController {
     private Button hackButton;
     @FXML
     private Button eatingButton;
-    Student mainHero = new Student(1,1,1,100);
 
     @FXML
     ProgressBar energyBar;
@@ -37,8 +40,6 @@ public class GameController {
         foodBar.setProgress(mainHero.getSatiety());
         uniBar.setProgress(mainHero.getUniversity());
     }
-
-
 
     @FXML
     public void hack() throws IOException{
@@ -74,7 +75,19 @@ public class GameController {
         System.out.println("I've eaten");
     }
     @FXML
-    public void exit() throws IOException{
-        System.exit(1);
+    public void exit() {
+        try {
+            Stage stage = new Stage();
+            Parent root = FXMLLoader.load(getClass().getResource("../fxmlFiles/youWannaExit.fxml"));
+            stage.setTitle("Really?");
+            stage.setScene(new Scene(root, 500, 300));
+            stage.setResizable(false);
+            stage.initModality(Modality.WINDOW_MODAL);
+            stage.initOwner(quitButton.getScene().getWindow());
+            stage.show();
+        } catch(IOException e) {
+//            e.printStackTrace();
+            System.out.println("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
+        }
     }
 }
