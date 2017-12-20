@@ -22,17 +22,17 @@ public class Student {
         this.money = money;
     }
     public void toSleep() {
-        randomPlus(energy,70,60);
-        randomPlus(satiety,50, 30);
-        randomMinus(university, 20, 10);
+        energy = randomPlus(energy,70,60);
+        satiety = randomMinus(satiety,50, 30);
+        university = randomMinus(university, 20, 10);
         events(15, energy, university, 50, 30);
     }
 
     public void toStudy() {
-        randomMinus(university, 35, 20);
+        university = randomPlus(university, 35, 20);
         minusMoney(25);
-        randomMinus(energy, 40, 20);
-        randomMinus(satiety,40,20);
+        energy = randomMinus(energy, 40, 20);
+        satiety = randomMinus(satiety,40,20);
         events(15, energy, university, 25, 15);
     }
 
@@ -42,32 +42,32 @@ public class Student {
         switch (restaurant) {
             case 1: //добрая
                 randomMinusMoney(200, 100);
-                randomPlus(energy,5,2);
-                randomPlus(satiety,30, 15);
+                energy = randomPlus(energy,5,2);
+                satiety = randomPlus(satiety,30, 15);
                 events(15, university, energy, medicine,40, 30, 400, 200);
                 break;
             case 2: //ханума
                 randomMinusMoney(250,100);
-                randomPlus(energy, 7, 4);
-                randomPlus(satiety, 40, 20);
+                energy = randomPlus(energy, 7, 4);
+                satiety = randomPlus(satiety, 40, 20);
                 events(15, university, energy, medicine,40, 30, 400, 200);
                 break;
             case 3: //дошик
                 randomMinusMoney(50, 20);
-                randomPlus(energy,3,1);
-                randomPlus(satiety,15, 5);
+                energy = randomPlus(energy,3,1);
+                satiety = randomPlus(satiety,15, 5);
                 events(15, university, energy, medicine,40, 30, 400, 200);
                 break;
             case 4: //макдональдс
                 randomMinusMoney(600, 350);
-                randomPlus(energy,10,5);
-                randomPlus(satiety,50, 35);
+                energy = randomPlus(energy,10,5);
+                satiety = randomPlus(satiety,50, 35);
                 events(15, university, energy, medicine,40, 30, 400, 200);
                 break;
             case 5: //мастер пицца
                 randomMinusMoney(140, 100);
-                randomPlus(energy,5,2);
-                randomPlus(satiety,30, 20);
+                energy = randomPlus(energy,5,2);
+                satiety = randomPlus(satiety,30, 20);
                 events(15, university, energy, medicine,40, 30, 400, 200);
                 break;
         }
@@ -163,9 +163,9 @@ public class Student {
         }
 
         if (end == true) {// действие при конце игры с положительным исходом
-            randomMinus(energy, 50, 40);
-            randomMinus(satiety, 40, 30);
-            randomMinus(university, 20, 10);
+            energy = randomMinus(energy, 50, 40);
+            satiety = randomMinus(satiety, 40, 30);
+            university = randomMinus(university, 20, 10);
             int moneyPoints = 0;
             switch (thisAttempt){
                 case 6:
@@ -187,9 +187,9 @@ public class Student {
             System.out.println(":)");
         }
         else { //с отрицательным
-            randomMinus(energy, 50, 40);
-            randomMinus(satiety, 40, 30);
-            randomMinus(university, 20, 10);
+            energy = randomMinus(energy, 50, 40);
+            satiety = randomMinus(satiety, 40, 30);
+            university = randomMinus(university, 20, 10);
             System.out.println(":(");
         }
     }
@@ -205,21 +205,23 @@ public class Student {
     }
 
     //метод, который добавляет рандомное количесвто единиц к показателю(field) в переделах от min до max
-    public void randomPlus(double field, int max, int min) {
+    public double randomPlus(double field, int max, int min) {
         final double MAXIMUM_LEVEL = 1;
         Random rnd = new Random(System.currentTimeMillis());
         double fieldPoints = (min + rnd.nextInt(max-min+1))*0.01;
         if (fieldPoints + field > MAXIMUM_LEVEL) field = MAXIMUM_LEVEL;
             else field += fieldPoints;
+        return field;
     }
 
     //метод, который вычитает рандомное количесвто единиц у показателя(field) в переделах от min до max
-    public void randomMinus(double field, int max, int min) {
+    public double randomMinus(double field, int max, int min) {
         final double MINIMUM_LEVEL = 0;
         Random rnd = new Random(System.currentTimeMillis());
         double fieldPoints = (min + rnd.nextInt(max-min+1)) * 0.01;
         if (field - fieldPoints < MINIMUM_LEVEL) field = MINIMUM_LEVEL;
         else field -= fieldPoints;
+        return field;
     }
 
     //метод, который вычитает определенное количесвто единиц(value) от показателя(field) для денег
@@ -238,9 +240,11 @@ public class Student {
             else System.err.println("нищеброд");
     }
     //метод, выдающий рандомное кол-во денег для игрока
-    public void randomPlusMoney(int moneyPoints, int min, int max){
+    public int randomPlusMoney(int moneyPoints, int min, int max){
         Random rnd = new Random(System.currentTimeMillis());
         moneyPoints = min + rnd.nextInt(max-min+1);
+        money -= moneyPoints;
+        return moneyPoints;
     }
 
     //методы ивентов

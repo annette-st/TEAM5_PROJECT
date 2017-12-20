@@ -81,7 +81,11 @@ public class AtmController {
     @FXML
     public void insertOne () {
         gameController.mainHero.setInput(1);
+<<<<<<< HEAD
 //        enteredText.setText(()(gameController.mainHero.getInput()));
+=======
+        //enteredText.setText(gameController.mainHero.getInput());
+>>>>>>> d4747fc7acb689aefd9f0227c90c1c7127941b73
     }
     public void insertTwo () {
         gameController.mainHero.setInput(2);

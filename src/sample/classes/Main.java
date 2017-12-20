@@ -28,6 +28,8 @@ public class Main extends Application {
         tiredness.start(); //запуск потока
         launch(args);
         //Thread.sleep(20000);
+        //Student student = new Student(1,1,1, 100);
+        //student.toHack();
         tiredness.stop();
     }
 }
