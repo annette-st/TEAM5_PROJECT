@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.questionModel">
+    <children>
+        <Label alignment="CENTER" prefHeight="50.0" prefWidth="600.0" text="What's Happenning here?">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Label>
+        <ToolBar layoutY="365.0" prefHeight="40.0" prefWidth="610.0">
+            <items>
+                <AnchorPane>
+                    <children>
+                        <Button fx:id="okayButton" mnemonicParsing="false" onAction="#doNothing" prefHeight="35.0" prefWidth="100.0" text="Clear!" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="250.0">
+                            <font>
+                                <Font size="15.0" />
+                            </font></Button>
+                    </children>
+                </AnchorPane>
+            </items>
+        </ToolBar>
+        <Label alignment="CENTER" layoutX="50.0" layoutY="63.0" prefHeight="35.0" prefWidth="504.0" text="Hack debit cards(all hack are fake!)">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Label>
+        <Label alignment="TOP_CENTER" layoutX="50.0" layoutY="98.0" prefHeight="23.0" prefWidth="504.0" text="Try to guess a PIN.">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Label>
+        <Label alignment="TOP_CENTER" layoutX="50.0" layoutY="121.0" prefHeight="23.0" prefWidth="504.0" text="you will see some stuff like **** or **num*.">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Label>
+        <Label alignment="TOP_CENTER" layoutX="50.0" layoutY="144.0" prefHeight="23.0" prefWidth="504.0" text="&quot;*&quot; means that you haven't guessed the digit of the PIN.">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Label>
+        <Label alignment="TOP_CENTER" layoutX="53.0" layoutY="167.0" prefHeight="23.0" prefWidth="504.0" text="number means you've guessed the digit of the PIN.">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Label>
+        <Label alignment="TOP_CENTER" layoutX="40.0" layoutY="189.0" prefHeight="23.0" prefWidth="524.0" text="&quot;Existing: number&quot; means you've guessed digit, but it's not on the right place.">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Label>
+        <Label alignment="TOP_CENTER" layoutX="50.0" layoutY="222.0" prefHeight="23.0" prefWidth="504.0" text="Good luck!">
+            <font>
+                <Font size="23.0" />
+            </font>
+        </Label>
+        <Label alignment="TOP_CENTER" layoutX="50.0" layoutY="265.0" prefHeight="23.0" prefWidth="504.0" text="And remember:">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Label>
+        <Label alignment="TOP_CENTER" layoutX="53.0" layoutY="301.0" prefHeight="23.0" prefWidth="504.0" text="ALL HACKS ARE FAKE!!!">
+            <font>
+                <Font size="30.0" />
+            </font>
+        </Label>
+    </children>
+</Pane>

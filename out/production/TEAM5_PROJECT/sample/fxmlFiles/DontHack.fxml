@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.questionModel">
+    <children>
+        <Label alignment="CENTER" prefHeight="50.0" prefWidth="600.0" text="Hacking?">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Label>
+        <ToolBar layoutY="350.0" prefHeight="60.0" prefWidth="610.0">
+            <items>
+                <AnchorPane>
+                    <children>
+                        <Button fx:id="okayButton" mnemonicParsing="false" onAction="#doNothing" prefHeight="35.0" prefWidth="100.0" text="Clear!" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="250.0" AnchorPane.topAnchor="5.0">
+                            <font>
+                                <Font size="15.0" />
+                            </font></Button>
+                    </children>
+                </AnchorPane>
+            </items>
+        </ToolBar>
+        <Label alignment="TOP_CENTER" layoutX="50.0" layoutY="98.0" prefHeight="23.0" prefWidth="504.0" text="Hacking is a bad thing to do!">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+        <Label alignment="TOP_CENTER" layoutX="53.0" layoutY="151.0" prefHeight="23.0" prefWidth="504.0" text="Moreover, it's immoral, as you steal money.">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+        <Label alignment="TOP_CENTER" layoutX="50.0" layoutY="222.0" prefHeight="23.0" prefWidth="504.0" text="Take my gift">
+            <font>
+                <Font size="23.0" />
+            </font>
+        </Label>
+        <Label alignment="TOP_CENTER" layoutX="50.0" layoutY="265.0" prefHeight="23.0" prefWidth="504.0" text="the gist is money))">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Label>
+        <Label alignment="TOP_CENTER" layoutX="53.0" layoutY="301.0" prefHeight="23.0" prefWidth="504.0" text="Neverhack again!">
+            <font>
+                <Font size="30.0" />
+            </font>
+        </Label>
+    </children>
+</Pane>

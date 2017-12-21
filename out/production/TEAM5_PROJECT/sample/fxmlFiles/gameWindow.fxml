@@ -22,6 +22,11 @@
                                 <Button fx:id="quitButton" mnemonicParsing="false" onAction="#exit" prefHeight="30.0" prefWidth="70.0" text="Quit" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="5.0" />
                             </children>
                         </AnchorPane>
+                        <AnchorPane>
+                            <children>
+                                <Button fx:id="questionButton" mnemonicParsing="false" onAction="#askQuestion" prefHeight="30.0" prefWidth="30.0" text="?" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="854.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="5.0" />
+                            </children>
+                        </AnchorPane>
                     </items>
                 </ToolBar>
             </children>
@@ -40,33 +45,28 @@
                 <Image url="@../../icons/icons8-Удар%20молнии-48.png" />
             </image>
         </ImageView>
-        <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="10.0" layoutY="90.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="638.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@../../icons/icons8-Отдел-48.png" />
             </image>
         </ImageView>
-        <ProgressBar fx:id="uniBar" layoutX="50.0" layoutY="96.0" prefWidth="300.0" progress="1.0" />
-        <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="10.0" layoutY="130.0" pickOnBounds="true" preserveRatio="true">
+        <ProgressBar fx:id="uniBar" layoutX="680.0" layoutY="16.0" prefWidth="300.0" progress="1.0" />
+        <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="638.0" layoutY="49.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@../../icons/icons8-Рубль-48.png" />
             </image>
         </ImageView>
-        <Label layoutX="370.0" layoutY="15.0" prefHeight="140.0" prefWidth="620.0" text="person's status will be here">
-            <padding>
-                <Insets left="12.0" />
-            </padding>
-        </Label>
         <Button fx:id="uniButton" layoutX="75.0" layoutY="280.0" mnemonicParsing="false" onAction="#goToUni" prefHeight="40.0" prefWidth="250.0" text="Go to university" />
         <Button fx:id="sleepButton" layoutX="75.0" layoutY="200.0" mnemonicParsing="false" onAction="#goToSleep" prefHeight="40.0" prefWidth="250.0" text="Go to sleep" />
         <Button fx:id="hackButton" layoutX="75.0" layoutY="440.0" mnemonicParsing="false" onAction="#hack" prefHeight="40.0" prefWidth="250.0" text="Hack" />
         <Group />
         <Button fx:id="eatingButton" layoutX="75.0" layoutY="360.0" mnemonicParsing="false" onAction="#haveMeal" prefHeight="40.0" prefWidth="250.0" text="Have a meal" />
-        <Label alignment="CENTER" layoutX="50.0" layoutY="135.0" prefHeight="20.0" prefWidth="75.0" text="Money">
+        <Label alignment="CENTER" layoutX="680.0" layoutY="55.0" prefHeight="20.0" prefWidth="75.0" text="Money">
             <font>
                 <Font size="15.0" />
             </font>
         </Label>
-        <Label fx:id="moneyLabel" alignment="CENTER" layoutX="172.0" layoutY="135.0" prefHeight="21.0" prefWidth="123.0" text="200">
+        <Label fx:id="moneyLabel" alignment="CENTER" layoutX="800.0" layoutY="55.0" prefHeight="21.0" prefWidth="123.0">
             <font>
                 <Font size="15.0" />
             </font>

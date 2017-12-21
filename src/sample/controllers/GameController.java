@@ -26,8 +26,8 @@ public class GameController {
 
     int input = 10;
 
-    int[] cardID = mainHero.toHackGeneration();
-    char[] output = mainHero.toHackBulls(enteredNumber, cardID);
+//    int[] cardID = mainHero.toHackGeneration();
+    //char[] output = mainHero.toHackBulls(enteredNumber, cardID);
 
     boolean enter = false;
     int count = 0;
